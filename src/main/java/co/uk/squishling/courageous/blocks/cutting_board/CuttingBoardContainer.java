@@ -120,8 +120,10 @@ public class CuttingBoardContainer extends Container implements IHasTileEntity {
 
             for (int i = INGREDIENT_SLOT_A; i <= INGREDIENT_SLOT_D; i++) {
                 if (getSlot(i).getStack().isEmpty()) continue;
-
-                Sandwich.addIngredient(stack, getSlot(i).getStack());
+    
+                ItemStack newStack=getSlot(i).getStack().copy();
+                newStack.setCount(1);
+                Sandwich.addIngredient(stack, newStack);
             }
 
             getSlot(SANDWICH_OUTPUT_SLOT).putStack(stack);
