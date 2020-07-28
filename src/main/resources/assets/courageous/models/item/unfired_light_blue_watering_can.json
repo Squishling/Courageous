@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "courageous:item/pottery/watering_can/unfired/light_blue_watering_can"
+  }
+}
