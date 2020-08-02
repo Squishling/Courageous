@@ -1,14 +1,12 @@
 package io.xerousso.courageous.blocks.vegetation;
 
-import io.xerousso.courageous.blocks.IBlock;
-import io.xerousso.courageous.blocks.ModBlocks;
+import io.xerousso.courageous.blocks.Blockz;
+import io.xerousso.courageous.items.IItem;
 import io.xerousso.courageous.tabs.WorldTab;
-import io.xerousso.courageous.util.lib.DefaultBlockProperties;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -26,7 +24,7 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class Bulrushes extends ShearableDoublePlantBlock implements IWaterLoggable, IBlock {
+public class Bulrushes extends DoublePlantBlock implements IWaterLoggable, IItem {
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
@@ -34,8 +32,6 @@ public class Bulrushes extends ShearableDoublePlantBlock implements IWaterLoggab
         super(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0).sound(SoundType.WET_GRASS));
 
         setDefaultState(getDefaultState().with(WATERLOGGED, false));
-
-        DefaultBlockProperties.defaults(this, "bulrushes");
     }
 
     @Nullable
@@ -45,7 +41,7 @@ public class Bulrushes extends ShearableDoublePlantBlock implements IWaterLoggab
         boolean water = context.getWorld().getFluidState(context.getPos()).isTagged(FluidTags.WATER) && context.getWorld().getFluidState(context.getPos()).getLevel() == 8;
         BlockState state = getDefaultState();
         if (water) state = state.with(WATERLOGGED, true);
-        return blockpos.getY() < context.getWorld().getDimension().getHeight() - 1 && context.getWorld().getBlockState(blockpos.up()).isReplaceable(context) ? state : null;
+        return blockpos.getY() < context.getWorld().getHeight() - 1 && context.getWorld().getBlockState(blockpos.up()).isReplaceable(context) ? state : null;
     }
 
     @Override
@@ -63,10 +59,6 @@ public class Bulrushes extends ShearableDoublePlantBlock implements IWaterLoggab
         return super.updatePostPlacement(state, direction, state2, world, pos, pos2);
     }
 
-    public IFluidState getFluidState(BlockState state) {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
-    }
-
     @Override
     protected void fillStateContainer(Builder<Block, BlockState> builder) {
         builder.add(WATERLOGGED);
@@ -75,7 +67,7 @@ public class Bulrushes extends ShearableDoublePlantBlock implements IWaterLoggab
 
     @Override
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return state.getBlock() == ModBlocks.MUD;
+        return state.getBlock() == Blockz.MUD.get();
     }
 
     @Override
@@ -100,4 +92,5 @@ public class Bulrushes extends ShearableDoublePlantBlock implements IWaterLoggab
     public ItemGroup getTab() {
         return WorldTab.WORLD;
     }
+
 }

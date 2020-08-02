@@ -1,50 +1,47 @@
 package io.xerousso.courageous.blocks.vegetation;
 
-import io.xerousso.courageous.blocks.IBlock;
+import com.sun.javafx.geom.Vec3d;
+import io.xerousso.courageous.items.IItem;
 import io.xerousso.courageous.tabs.WorldTab;
-import io.xerousso.courageous.util.lib.DefaultBlockProperties;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.IBlockReader;
-import net.minecraftforge.common.IShearable;
 
-public class CustomBush extends BushBlock implements IShearable, IBlock {
+import java.util.function.Function;
 
-    private Block[] acceptedBlocks;
+public class Bush extends BushBlock implements IItem {
+
+    private Function<BlockState, Boolean> groundCheck;
     private VoxelShape shape;
 
-    public CustomBush(String name, VoxelShape shape, Block... acceptedBlocks) {
+    public Bush(Function<BlockState, Boolean> groundCheck, VoxelShape shape) {
         super(Block.Properties.create(Material.TALL_PLANTS, MaterialColor.WOOD).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0));
 
-        this.acceptedBlocks = acceptedBlocks;
+        this.groundCheck = groundCheck;
         this.shape = shape;
-
-        DefaultBlockProperties.defaults(this, name);
     }
 
-    public CustomBush(String name, VoxelShape shape) {
-        this(name, shape, Blocks.GRASS_BLOCK, Blocks.PODZOL, Blocks.DIRT, Blocks.COARSE_DIRT);
+    public Bush(VoxelShape shape) {
+        this(state -> state.isIn(Blocks.GRASS_BLOCK) || state.isIn(Blocks.DIRT) || state.isIn(Blocks.COARSE_DIRT) || state.isIn(Blocks.PODZOL) || state.isIn(Blocks.FARMLAND), shape);
     }
 
-    public CustomBush(String name, Block... blocks) {
-        this(name, Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D), blocks);
+    public Bush(Function<BlockState, Boolean> groundCheck) {
+        this(groundCheck, Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D));
     }
 
-    public CustomBush(String name) {
-        this(name, Blocks.GRASS_BLOCK, Blocks.PODZOL, Blocks.DIRT, Blocks.COARSE_DIRT);
+    public Bush() {
+        this(state -> state.isIn(Blocks.GRASS_BLOCK) || state.isIn(Blocks.DIRT) || state.isIn(Blocks.COARSE_DIRT) || state.isIn(Blocks.PODZOL) || state.isIn(Blocks.FARMLAND));
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        for (Block block : acceptedBlocks) if (state.getBlock() == block) return true;
-        if (BlockTags.SAND.contains(state.getBlock())) return true;
-        return false;
+        return groundCheck.apply(state);
     }
 
     public Block.OffsetType getOffsetType() {
@@ -52,7 +49,7 @@ public class CustomBush extends BushBlock implements IShearable, IBlock {
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-        Vec3d vec3d = state.getOffset(worldIn, pos);
+        Vector3d vec3d = state.getOffset(worldIn, pos);
         return shape.withOffset(vec3d.x, vec3d.y, vec3d.z);
     }
 

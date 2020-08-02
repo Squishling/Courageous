@@ -111,7 +111,7 @@ dependencies {
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-//    compile fg.deobf("vazkii.patchouli:Patchouli:1.15.2-1.2-29.147")
+//    compile fg.deobf("vazkii.patchouli:Patchouli:1.16-39")
 //    compile fg.deobf("curse.maven:natures-compass:2893530")
 
     // compileOnly fg.deobf("mezz.jei:jei-1.15.2:6.0.0.4:api")
@@ -163,5 +163,28 @@ publishing {
 //        maven {
 //            url "file:///${project.projectDir}/mcmodsrepo"
 //        }
+    }
+}
+
+// Process resources on build
+processResources {
+    // This will ensure that this task is redone when the versions change.
+    inputs.property 'version', modVersion
+    inputs.property 'modId', modID
+    inputs.property 'displayName', fileName
+
+    // Replace stuff in mods.toml, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'META-INF/mods.toml'
+
+        // Replace version
+        expand 'version':modVersion
+        expand 'modId':modID
+        expand 'displayName':fileName
+    }
+
+    // Copy everything else except the mods.toml
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'META-INF/mods.toml'
     }
 }

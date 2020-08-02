@@ -20,8 +20,8 @@ public class BiomeSparseAlpineForest extends Biome {
                 .depth(1.5f)
                 .scale(0.1f)
 
-                .waterColor(0x02367e)
-                .waterFogColor(0x2158a5)
+//                .waterColor(0x02367e)
+//                .waterFogColor(0x2158a5)
 
                 .parent((String) null));
 
@@ -31,14 +31,14 @@ public class BiomeSparseAlpineForest extends Biome {
         DefaultBiomeFeatures.addFreezeTopLayer(this);
         DefaultBiomeFeatures.addSprings(this);
         DefaultBiomeFeatures.addSparseBerryBushes(this);
-        DefaultBiomeFeatures.addStructures(this);
+//        DefaultBiomeFeatures.addStructures(this);
 
         ModFeatures.addUndergroundFeatures(this);
         ModFeatures.addVegetation(this);
         ModFeatures.addPillagerOutpost(this);
         ModFeatures.addVilage(this, "taiga");
 
-        ModFeatures.addSparseAlpineTrees(this);
+//        ModFeatures.addSparseAlpineTrees(this);
 
         this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.SHEEP, 12, 4, 4));
         this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.PIG, 10, 4, 4));

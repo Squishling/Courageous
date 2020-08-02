@@ -1,6 +1,6 @@
 package io.xerousso.courageous.util;
 
-import io.xerousso.courageous.blocks.ModBlocks;
+import io.xerousso.courageous.blocks.Blockz;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.color.IItemColor;
@@ -34,20 +34,20 @@ public class ModItemColors implements IItemColor {
     }
 
     public static void registerItemColors() {
-        registerItem(ModBlocks.ALPINE_LEAVES, 0x446852);
-        registerItem(ModBlocks.DOUGLAS_FIR_LEAVES, 0x748541);
+        registerItem(Blockz.ALPINE_LEAVES.get(), 0x446852);
+        registerItem(Blockz.DOUGLAS_FIR_LEAVES.get(), 0x748541);
 
-        registerItem(ModBlocks.PALM_LEAVES, 0xe1ff43);
+        registerItem(Blockz.PALM_LEAVES.get(), 0xe1ff43);
 
-        registerItem(ModBlocks.PEAR_LEAVES, 0x59ae30);
-        registerItem(ModBlocks.ORANGE_LEAVES, 0x59ae30);
-        registerItem(ModBlocks.LEMON_LEAVES, 0x59ae30);
-        registerItem(ModBlocks.PLUM_LEAVES, 0x59ae30);
-        registerItem(ModBlocks.AVOCADO_LEAVES, 0x59ae30);
-        registerItem(ModBlocks.KIWI_FRUIT_LEAVES, 0x59ae30);
-        registerItem(ModBlocks.APPLE_LEAVES, 0x59ae30);
+        registerItem(Blockz.PEAR_LEAVES.get(), 0x59ae30);
+        registerItem(Blockz.ORANGE_LEAVES.get(), 0x59ae30);
+        registerItem(Blockz.LEMON_LEAVES.get(), 0x59ae30);
+        registerItem(Blockz.PLUM_LEAVES.get(), 0x59ae30);
+        registerItem(Blockz.AVOCADO_LEAVES.get(), 0x59ae30);
+        registerItem(Blockz.KIWI_FRUIT_LEAVES.get(), 0x59ae30);
+        registerItem(Blockz.APPLE_LEAVES.get(), 0x59ae30);
 
-        registerItem(ModBlocks.FALLEN_LEAVES, 0x59ae30);
+        registerItem(Blockz.FALLEN_LEAVES.get(), 0x59ae30);
 
         for (Item item : ITEMS.keySet()) Minecraft.getInstance().getItemColors().register(INSTANCE, item);
         for (Block item : BLOCKS.keySet()) Minecraft.getInstance().getItemColors().register(INSTANCE, item);

@@ -1,16 +1,6 @@
 {
     "replace": false,
     "values": [
-        "courageous:palm_leaves",
-        "courageous:alpine_leaves",
-        "courageous:pear_leaves",
-        "courageous:maple_leaves",
-        "courageous:redwood_leaves",
-        "courageous:lemon_leaves",
-        "courageous:plum_leaves",
-        "courageous:orange_leaves",
-        "courageous:apple_leaves",
-        "courageous:kiwi_fruit_leaves",
-        "courageous:avocado_leaves"
+
     ]
 }

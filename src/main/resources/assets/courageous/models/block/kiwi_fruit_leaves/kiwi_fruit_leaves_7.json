@@ -2,6 +2,6 @@
   "parent": "courageous:block/leaves_overlayed",
   "textures": {
     "leaves": "block/oak_leaves",
-    "overlay": "courageous:block/pear_leaves/pear_overlay_10"
+    "overlay": "courageous:block/kiwi_fruit_leaves/kiwi_fruit_leaves_overlay_7"
   }
 }

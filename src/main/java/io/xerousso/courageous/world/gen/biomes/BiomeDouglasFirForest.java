@@ -21,8 +21,8 @@ public class BiomeDouglasFirForest extends Biome {
                 .depth(0.5f)
                 .scale(0.1f)
 
-                .waterColor(0x02367e)
-                .waterFogColor(0x2158a5)
+//                .waterColor(0x02367e)
+//                .waterFogColor(0x2158a5)
 
                 .parent((String) null));
 
@@ -31,7 +31,7 @@ public class BiomeDouglasFirForest extends Biome {
         DefaultBiomeFeatures.addReedsAndPumpkins(this);
         DefaultBiomeFeatures.addFreezeTopLayer(this);
         DefaultBiomeFeatures.addSprings(this);
-        DefaultBiomeFeatures.addStructures(this);
+//        DefaultBiomeFeatures.addStructures(this);
 
         ModFeatures.addUndergroundFeatures(this);
         ModFeatures.addVegetation(this);
@@ -39,7 +39,7 @@ public class BiomeDouglasFirForest extends Biome {
         ModFeatures.addPillagerOutpost(this);
         ModFeatures.addVilage(this, "taiga");
 
-        ModFeatures.addTree(this, ModFeatures.DOUGLAS_FIR_TREE, 12, 0.1f, 1);
+//        ModFeatures.addTree(this, ModFeatures.DOUGLAS_FIR_TREE, 12, 0.1f, 1);
         ModFeatures.addSparseTrees(this);
 
         this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.SHEEP, 12, 4, 4));

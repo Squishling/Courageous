@@ -1,11 +1,11 @@
 package io.xerousso.courageous.items.pottery;
 
-import io.xerousso.courageous.items.ItemBase;
 import io.xerousso.courageous.tabs.PotteryTab;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.stats.Stats;
@@ -17,9 +17,6 @@ import net.minecraft.util.math.RayTraceContext;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.RayTraceResult.Type;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
@@ -35,18 +32,18 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class Amphora extends ItemBase {
+public class Amphora extends Item {
 
-    public Amphora(String name) {
-        super(name, PotteryTab.POTTERY);
+    public Amphora() {
+        super(new Item.Properties().group(PotteryTab.POTTERY));
     }
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if (!getFluid(stack).isEmpty()) {
-            String text = TextFormatting.GOLD + new TranslationTextComponent(getFluid(stack).getTranslationKey()).getFormattedText() + TextFormatting.RESET
-                    + " x " + getFluid(stack).getAmount();
-            tooltip.add(new StringTextComponent(text));
+//            String text = TextFormatting.GOLD + new TranslationTextComponent(getFluid(stack).getTranslationKey()).getFormattedText() + TextFormatting.RESET
+//                    + " x " + getFluid(stack).getAmount();
+//            tooltip.add(new StringTextComponent(text));
         }
     }
 

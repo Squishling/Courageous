@@ -1,8 +1,7 @@
 package io.xerousso.courageous.blocks.vegetation;
 
-import io.xerousso.courageous.blocks.IBlock;
+import io.xerousso.courageous.items.IItem;
 import io.xerousso.courageous.tabs.WorldTab;
-import io.xerousso.courageous.util.lib.DefaultBlockProperties;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.trees.OakTree;
@@ -12,22 +11,18 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.gen.feature.AbstractTreeFeature;
+import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import java.util.Random;
+import java.util.function.Supplier;
 
-public class CustomSapling extends SaplingBlock implements IBlock {
-
-    private Tree tree;
+public class Sapling extends SaplingBlock implements IItem {
 
     private VoxelShape shape;
 
-    public CustomSapling(String name, Tree tree) {
-        super(tree, Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.PLANT).hardnessAndResistance(0));
-        DefaultBlockProperties.defaults(this, name);
-
-        this.tree = tree;
+    public Sapling(Supplier<Tree> treeSupplier) {
+        super(treeSupplier.get(), Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.PLANT).hardnessAndResistance(0));
     }
 
     public Block setShape(VoxelShape shape) {
@@ -41,14 +36,14 @@ public class CustomSapling extends SaplingBlock implements IBlock {
         return super.getShape(state, worldIn, pos, context);
     }
 
-    public CustomSapling(String name, AbstractTreeFeature tree) {
-        this(name, new OakTree());
+    @Override
+    public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
+        this.placeTree(worldIn, pos, state, rand);
     }
 
     @Override
-    public void grow(ServerWorld world, Random rand, BlockPos pos, BlockState state) {
-//        tree.func_225545_a_(world, world.getChunkProvider().getChunkGenerator(), pos, state, rand);
-        placeTree(world, pos, state, rand);
+    public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
+        return (double)worldIn.rand.nextFloat() < 0.45D;
     }
 
     @Override

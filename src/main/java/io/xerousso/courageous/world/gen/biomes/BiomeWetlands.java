@@ -1,6 +1,5 @@
 package io.xerousso.courageous.world.gen.biomes;
 
-import io.xerousso.courageous.blocks.ModBlocks;
 import io.xerousso.courageous.world.gen.ModFeatures;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -21,21 +20,21 @@ public class BiomeWetlands extends Biome {
                 .depth(-0.2F)
                 .scale(0.1F)
 
-                .waterColor(0x64abfb)
-                .waterFogColor(0x64c2fb)
+//                .waterColor(0x64abfb)
+//                .waterFogColor(0x64c2fb)
 
                 .parent((String) null));
 
         DefaultBiomeFeatures.addSedimentDisks(this);
-        DefaultBiomeFeatures.addStructures(this);
+//        DefaultBiomeFeatures.addStructures(this);
 
         ModFeatures.addUndergroundFeatures(this);
         ModFeatures.addMudLake(this, 1);
         ModFeatures.addMudLake(this, 2);
         ModFeatures.addSwampDecoration(this);
 
-        ModFeatures.addSeaPlant(this, ModFeatures.BULRUSHES);
-        ModFeatures.addDoublePlant(this, ModBlocks.BULRUSHES.getDefaultState(), 190);
+//        ModFeatures.addSeaPlant(this, ModFeatures.BULRUSHES);
+//        ModFeatures.addDoublePlant(this, ModBlocks.BULRUSHES.getDefaultState(), 190);
 
         this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.SHEEP, 12, 4, 4));
         this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.PIG, 10, 4, 4));

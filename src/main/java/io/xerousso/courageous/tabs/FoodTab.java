@@ -1,6 +1,6 @@
 package io.xerousso.courageous.tabs;
 
-import io.xerousso.courageous.items.ModItems;
+import io.xerousso.courageous.items.Itemz;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -14,7 +14,7 @@ public class FoodTab extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(ModItems.AVOCADO);
+        return new ItemStack(Itemz.AVOCADO.get());
     }
 
 }

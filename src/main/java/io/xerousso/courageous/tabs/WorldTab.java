@@ -1,7 +1,6 @@
 package io.xerousso.courageous.tabs;
 
-import io.xerousso.courageous.blocks.ModBlocks;
-import net.minecraft.block.Block;
+import io.xerousso.courageous.items.Itemz;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -15,7 +14,7 @@ public class WorldTab extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack((Block) ModBlocks.PEAR_SAPLING);
+        return new ItemStack(Itemz.MUD_BALL.get());
     }
 
 }

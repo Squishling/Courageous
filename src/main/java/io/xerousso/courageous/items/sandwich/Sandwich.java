@@ -1,7 +1,7 @@
 package io.xerousso.courageous.items.sandwich;
 
-import io.xerousso.courageous.items.ItemBase;
-import io.xerousso.courageous.items.ModItems;
+import com.mojang.datafixers.util.Pair;
+import io.xerousso.courageous.items.Itemz;
 import io.xerousso.courageous.tabs.FoodTab;
 import io.xerousso.courageous.util.Util;
 import net.minecraft.client.util.ITooltipFlag;
@@ -20,19 +20,18 @@ import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-import org.apache.commons.lang3.tuple.Pair;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sandwich extends ItemBase {
+public class Sandwich extends Item {
 
     private String HANDLER = "handler";
 
     public Sandwich() {
-        super("sandwich", new Item.Properties().group(FoodTab.FOOD).food(new Builder().hunger(2).saturation(0.24f).build()).setISTER(() -> SandwichISTER::new));
+        super(new Item.Properties().group(FoodTab.FOOD).food(new Builder().hunger(2).saturation(0.24f).build()).setISTER(() -> SandwichISTER::new));
     }
 
     @Override
@@ -108,8 +107,8 @@ public class Sandwich extends ItemBase {
                     PlayerEntity player = ((PlayerEntity) entity);
 
                     ArrayList<Food> foods = new ArrayList<Food>();
-                    foods.add(ModItems.BREAD_SLICE.getFood());
-                    foods.add(ModItems.BREAD_SLICE.getFood());
+                    foods.add(Itemz.BREAD_SLICE.get().getFood());
+                    foods.add(Itemz.BREAD_SLICE.get().getFood());
 
                     for (int i = 0; i < handler.getSlots(); i++) {
                         System.out.println(handler.getStackInSlot(i));
@@ -123,9 +122,9 @@ public class Sandwich extends ItemBase {
                     player.getFoodStats().setFoodSaturationLevel(player.getFoodStats().getSaturationLevel() + food.getSaturation());
 
                     for (Pair<EffectInstance, Float> pair : food.getEffects()) {
-                        if (pair.getLeft() != null && world.rand.nextFloat() < pair.getRight()) {
-                            entity.addPotionEffect(new EffectInstance(pair.getLeft()));
-                        }
+//                        if (pair.getLeft() != null && world.rand.nextFloat() < pair.getRight()) {
+//                            entity.addPotionEffect(new EffectInstance(pair.getLeft()));
+//                        }
                     }
                 });
 

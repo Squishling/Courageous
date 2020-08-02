@@ -1,19 +1,6 @@
 {
     "replace": false,
     "values": [
-        "courageous:palm_log",
-        "courageous:maple_log",
-        "courageous:maple_log_syrup",
-        "courageous:redwood_log",
 
-        "courageous:palm_wood",
-        "courageous:stripped_palm_log",
-        "courageous:stripped_palm_wood",
-        "courageous:redwood_wood",
-        "courageous:stripped_redwood_wood",
-        "courageous:stripped_redwood_log",
-        "courageous:maple_wood",
-        "courageous:stripped_maple_wood",
-        "courageous:stripped_maple_log"
     ]
 }

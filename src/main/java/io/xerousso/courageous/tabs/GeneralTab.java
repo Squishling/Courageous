@@ -1,6 +1,6 @@
 package io.xerousso.courageous.tabs;
 
-import io.xerousso.courageous.blocks.ModBlocks;
+import io.xerousso.courageous.blocks.Blockz;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -14,7 +14,7 @@ public class GeneralTab extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(ModBlocks.ARCHITECTS_TABLE);
+        return new ItemStack(Blockz.STRIPPED_MAPLE_LOG.get());
     }
 
 }

@@ -20,8 +20,8 @@ public class BiomeTemperateRainforest extends Biome {
                 .depth(1.5f)
                 .scale(0.2f)
 
-                .waterColor(0x0b5ed0)
-                .waterFogColor(0x227cf9)
+//                .waterColor(0x0b5ed0)
+//                .waterFogColor(0x227cf9)
 
                 .parent((String) null));
 
@@ -30,14 +30,14 @@ public class BiomeTemperateRainforest extends Biome {
         DefaultBiomeFeatures.addReedsAndPumpkins(this);
         DefaultBiomeFeatures.addFreezeTopLayer(this);
         DefaultBiomeFeatures.addSprings(this);
-        DefaultBiomeFeatures.addStructures(this);
+//        DefaultBiomeFeatures.addStructures(this);
 
         ModFeatures.addUndergroundFeatures(this);
         ModFeatures.addVegetation(this);
         ModFeatures.addPillagerOutpost(this);
         ModFeatures.addVilage(this, "plains");
 
-        ModFeatures.addTree(this, ModFeatures.ALPINE_TREE, 6, 0.1f, 1);
+//        ModFeatures.addTree(this, ModFeatures.ALPINE_TREE, 6, 0.1f, 1);
         ModFeatures.addDefaultTrees(this, 5, 0.2f, 1);
 
         this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.SHEEP, 12, 4, 4));

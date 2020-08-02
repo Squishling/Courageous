@@ -16,17 +16,17 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import java.util.Random;
+import java.util.function.Supplier;
 
-public class HarvestableLeaves extends CustomLeaves {
+public class HarvestableLeaves extends Leaves {
 
     public static final BooleanProperty GROWN = BooleanProperty.create("grown");
-    private Item item;
+    private Supplier<Item> item;
 
     private int min = 1;
     private int max = 2;
 
-    public HarvestableLeaves(String name, Item item) {
-        super(name);
+    public HarvestableLeaves(Supplier<Item> item) {
         this.setDefaultState(this.stateContainer.getBaseState().with(GROWN, false));
         this.item = item;
     }
@@ -46,7 +46,7 @@ public class HarvestableLeaves extends CustomLeaves {
 
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (Util.isServer(worldIn)) if (state.get(GROWN)) {
-            spawnAsEntity(worldIn, pos, new ItemStack(this.item, worldIn.getRandom().nextInt(max - min) + min));
+            spawnAsEntity(worldIn, pos, new ItemStack(this.item.get(), worldIn.getRandom().nextInt(max - min) + min));
             worldIn.playSound((PlayerEntity)null, pos, SoundEvents.ITEM_SWEET_BERRIES_PICK_FROM_BUSH, SoundCategory.BLOCKS, 1.0F, 0.8F + worldIn.rand.nextFloat() * 0.4F);
             worldIn.setBlockState(pos, state.with(GROWN, false), 2);
             return ActionResultType.SUCCESS;
@@ -67,7 +67,7 @@ public class HarvestableLeaves extends CustomLeaves {
         return this;
     }
 
-    @Override
+//    @Override
     public BlockState getStateForPlacement(BlockState state, Direction facing, BlockState state2, IWorld world, BlockPos pos1, BlockPos pos2, Hand hand) {
         return getDefaultState().with(GROWN, false).with(PERSISTENT, true);
     }

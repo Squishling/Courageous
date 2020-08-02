@@ -10,12 +10,11 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 
-public class DirectionLeavesBlock extends CustomLeaves {
+public class DirectionLeavesBlock extends Leaves {
 
     public static final DirectionProperty PROPERTY_FACING = BlockStateProperties.FACING;
 
-    public DirectionLeavesBlock(String name) {
-        super(name);
+    public DirectionLeavesBlock() {
         this.setDefaultState(this.getDefaultState().with(PROPERTY_FACING, Direction.UP));
     }
 
@@ -35,6 +34,7 @@ public class DirectionLeavesBlock extends CustomLeaves {
         super.fillStateContainer(builder);
     }
 
+    @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         return this.getDefaultState().with(PROPERTY_FACING, context.getNearestLookingDirection().getOpposite()).with(PERSISTENT, true);
     }

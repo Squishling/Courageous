@@ -1,8 +1,6 @@
 package io.xerousso.courageous.items.pottery;
 
-import io.xerousso.courageous.items.ItemBase;
 import io.xerousso.courageous.tabs.PotteryTab;
-import io.xerousso.courageous.util.rendering.ModParticles;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CropsBlock;
@@ -10,6 +8,7 @@ import net.minecraft.block.IGrowable;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.particles.ParticleTypes;
@@ -21,9 +20,6 @@ import net.minecraft.util.math.RayTraceContext;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.RayTraceResult.Type;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.capabilities.Capability;
@@ -41,18 +37,18 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class WateringCan extends ItemBase {
+public class WateringCan extends Item {
 
-    public WateringCan(String name) {
-        super(name, PotteryTab.POTTERY);
+    public WateringCan() {
+        super(new Item.Properties().group(PotteryTab.POTTERY));
     }
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if (!getFluid(stack).isEmpty()) {
-            String text = TextFormatting.GOLD + new TranslationTextComponent(getFluid(stack).getTranslationKey()).getFormattedText() + TextFormatting.RESET
-                    + " x " + getFluid(stack).getAmount();
-            tooltip.add(new StringTextComponent(text));
+//            String text = TextFormatting.GOLD + new TranslationTextComponent(getFluid(stack).getTranslationKey()).getFormattedText() + TextFormatting.RESET
+//                    + " x " + getFluid(stack).getAmount();
+//            tooltip.add(new StringTextComponent(text));
         }
     }
 
@@ -96,7 +92,7 @@ public class WateringCan extends ItemBase {
 
                 player.playSound(SoundEvents.WEATHER_RAIN_ABOVE, 0.2F, 1.5F);
 
-                for (int i = 0; i < 2; i++) world.addParticle(ModParticles.FALLING_WATER_PARTICLE_DATA, player.getPosX(), player.getPosY() + 1.25, player.getPosZ(), (player.getLookVec().getX() * 0.6f - 0.05f) + random.nextFloat() / 10f, 0f, (player.getLookVec().getZ() * 0.6f - 0.05f) + random.nextFloat() / 10f);
+//                for (int i = 0; i < 2; i++) world.addParticle(ModParticles.FALLING_WATER_PARTICLE_DATA, player.getPosX(), player.getPosY() + 1.25, player.getPosZ(), (player.getLookVec().getX() * 0.6f - 0.05f) + random.nextFloat() / 10f, 0f, (player.getLookVec().getZ() * 0.6f - 0.05f) + random.nextFloat() / 10f);
                 for (int i = 0; i < 4; i++) world.addParticle(ParticleTypes.SPLASH, pos.getX() + 0.4f + random.nextFloat() / 5, pos.getY() + 1.1f + random.nextFloat() / 5, pos.getZ() + random.nextFloat(), 0f, 0f, 0f);
 
                 player.addStat(Stats.ITEM_USED.get(this));

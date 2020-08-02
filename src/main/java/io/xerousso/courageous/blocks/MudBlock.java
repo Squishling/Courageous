@@ -1,5 +1,6 @@
 package io.xerousso.courageous.blocks;
 
+import io.xerousso.courageous.items.IItem;
 import io.xerousso.courageous.tabs.WorldTab;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -10,10 +11,10 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class MudBlock extends BlockBase implements IBlock {
+public class MudBlock extends Block implements IItem {
 
     public MudBlock() {
-        super("mud", Block.Properties.create(Material.EARTH, MaterialColor.BROWN).hardnessAndResistance(0.5F).sound(SoundType.SLIME).slipperiness(0.8f));
+        super(Block.Properties.create(Material.EARTH, MaterialColor.BROWN).hardnessAndResistance(0.5F).sound(SoundType.SLIME).slipperiness(0.8f));
     }
 
     public void onEntityWalk(World world, BlockPos pos, Entity entity) {

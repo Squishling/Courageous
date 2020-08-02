@@ -1,5 +1,7 @@
 package io.xerousso.courageous.items;
 
+import com.mojang.datafixers.util.Pair;
+import io.xerousso.courageous.tabs.FoodTab;
 import io.xerousso.courageous.util.Util;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
@@ -11,29 +13,22 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
-import org.apache.commons.lang3.tuple.Pair;
 
 public class CustomFood extends Item {
 
     private SoundEvent sound = SoundEvents.ENTITY_GENERIC_EAT;
     private UseAction action = UseAction.EAT;
 
-    public CustomFood(String name, Food food, ItemGroup group) {
-        super(new Item.Properties().group(group).food(food));
-        this.setRegistryName(Util.MOD_ID, name);
-
-        ModItems.ITEMS_ARRAY.add(this);
+    public CustomFood(Food food) {
+        super(new Item.Properties().group(FoodTab.FOOD).food(food));
     }
 
-    public CustomFood(String name, int hunger, float saturation, ItemGroup group) {
-        this(name, new Builder().hunger(hunger).saturation(saturation).build(), group);
+    public CustomFood(int hunger, float saturation) {
+        this(new Builder().hunger(hunger).saturation(saturation).build());
     }
 
-    public CustomFood(String name, Food food, Item containerItem, ItemGroup group) {
-        super(new Item.Properties().group(group).food(food).containerItem(containerItem));
-        this.setRegistryName(Util.MOD_ID, name);
-
-        ModItems.ITEMS_ARRAY.add(this);
+    public CustomFood(Food food, Item containerItem) {
+        super(new Item.Properties().group(FoodTab.FOOD).food(food).containerItem(containerItem));
     }
 
     public Item sound(SoundEvent sound) {
@@ -71,7 +66,7 @@ public class CustomFood extends Item {
             }
 
             for(Pair<EffectInstance, Float> pair : this.getFood().getEffects()) {
-                if (pair.getLeft() != null) entity.addPotionEffect(pair.getLeft());
+//                if (pair.getLeft() != null) entity.addPotionEffect(pair.getLeft());
             }
         }
 

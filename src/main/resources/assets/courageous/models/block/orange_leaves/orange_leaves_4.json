@@ -1,0 +1,7 @@
+{
+  "parent": "courageous:block/leaves_overlayed",
+  "textures": {
+    "leaves": "block/oak_leaves",
+    "overlay": "courageous:block/orange_leaves/orange_leaves_overlay_4"
+  }
+}

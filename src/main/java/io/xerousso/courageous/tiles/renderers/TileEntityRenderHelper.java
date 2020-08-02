@@ -1,10 +1,9 @@
 package io.xerousso.courageous.tiles.renderers;
 
-import io.xerousso.courageous.util.pseudofluids.PseudoFluidStack;
+//import io.xerousso.courageous.util.pseudofluids.PseudoFluidStack;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.Matrix4f;
 import net.minecraft.client.renderer.texture.AtlasTexture;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraftforge.fluids.FluidAttributes;
@@ -28,46 +27,46 @@ public class TileEntityRenderHelper {
         //light = Math.max(fluid.getAttributes().getLuminosity(), light) * 16; //Luminosity is in light levels. By multiplying by 16 we get a 0-256 level. Also, figure out whether the fluid itself gives off more light than the outside light, and if so, use that.
         //int skylight = world.getLightFor(LightType.SKY, pos) * 16; //Same as above, but then for the sky light
 
-        Matrix4f posMatrix = matrixStack.getLast().getMatrix();
-        builder //Bottom right corner
-                .pos(posMatrix, xMin, height, zMax)
-                .color(r, g, b, a)
-                .tex(tex.getMinU(), tex.getMaxV())
-                .lightmap(light)
-                .normal(0, 1, 0)
-                .overlay(overlay)
-                .endVertex();
-        builder //Top right corner
-                .pos(posMatrix, xMax, height, zMax)
-                .color(r, g, b, a)
-                .tex(tex.getMaxU(), tex.getMaxV())
-                .lightmap(light)
-                .normal(0, 1, 0)
-                .overlay(overlay)
-                .endVertex();
-        builder //Top left corner
-                .pos(posMatrix, xMax, height, zMin)
-                .color(r, g, b, a)
-                .tex(tex.getMaxU(), tex.getMinV())
-                .lightmap(light)
-                .normal(0, 1, 0)
-                .overlay(overlay)
-                .endVertex();
-        builder //Bottom left corner
-                .pos(posMatrix, xMin, height, zMin)
-                .color(r, g, b, a)
-                .tex(tex.getMinU(), tex.getMinV())
-                .lightmap(light)
-                .normal(0, 1, 0)
-                .overlay(overlay)
-                .endVertex();
+//        Matrix4f posMatrix = matrixStack.getLast().getMatrix();
+//        builder //Bottom right corner
+//                .pos(posMatrix, xMin, height, zMax)
+//                .color(r, g, b, a)
+//                .tex(tex.getMinU(), tex.getMaxV())
+//                .lightmap(light)
+//                .normal(0, 1, 0)
+//                .overlay(overlay)
+//                .endVertex();
+//        builder //Top right corner
+//                .pos(posMatrix, xMax, height, zMax)
+//                .color(r, g, b, a)
+//                .tex(tex.getMaxU(), tex.getMaxV())
+//                .lightmap(light)
+//                .normal(0, 1, 0)
+//                .overlay(overlay)
+//                .endVertex();
+//        builder //Top left corner
+//                .pos(posMatrix, xMax, height, zMin)
+//                .color(r, g, b, a)
+//                .tex(tex.getMaxU(), tex.getMinV())
+//                .lightmap(light)
+//                .normal(0, 1, 0)
+//                .overlay(overlay)
+//                .endVertex();
+//        builder //Bottom left corner
+//                .pos(posMatrix, xMin, height, zMin)
+//                .color(r, g, b, a)
+//                .tex(tex.getMinU(), tex.getMinV())
+//                .lightmap(light)
+//                .normal(0, 1, 0)
+//                .overlay(overlay)
+//                .endVertex();
     }
 
-    public static FluidAttributes getFluidTexture(FluidStack fluidStack) {
-        if (fluidStack instanceof PseudoFluidStack) {
-            return ((PseudoFluidStack) fluidStack).getAttributes();
-        } else {
-            return fluidStack.getFluid().getAttributes();
-        }
-    }
+//    public static FluidAttributes getFluidTexture(FluidStack fluidStack) {
+//        if (fluidStack instanceof PseudoFluidStack) {
+//            return ((PseudoFluidStack) fluidStack).getAttributes();
+//        } else {
+//            return fluidStack.getFluid().getAttributes();
+//        }
+//    }
 }

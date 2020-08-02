@@ -15,7 +15,7 @@ import net.minecraft.world.IWorldReader;
 public class FallenLeaves extends LeavesLike {
 
     public FallenLeaves() {
-        super("fallen_leaves", Block.Properties.create(Material.CARPET, MaterialColor.FOLIAGE).hardnessAndResistance(0.2F).sound(SoundType.PLANT).doesNotBlockMovement());
+        super(Block.Properties.create(Material.CARPET, MaterialColor.FOLIAGE).hardnessAndResistance(0.2F).sound(SoundType.PLANT).doesNotBlockMovement());
     }
 
     @Override
@@ -28,10 +28,5 @@ public class FallenLeaves extends LeavesLike {
         Block block = worldIn.getBlockState(pos.down()).getBlock();
         return block == Blocks.GRASS_BLOCK || block == Blocks.DIRT || block == Blocks.COARSE_DIRT || block == Blocks.PODZOL || block == Blocks.FARMLAND;
     }
-
-//    @Override
-//    public boolean isSolid(BlockState state) {
-//        return false;
-//    }
 
 }

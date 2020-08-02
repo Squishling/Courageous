@@ -1,6 +1,5 @@
 package io.xerousso.courageous.world.gen.biomes;
 
-import io.xerousso.courageous.blocks.ModBlocks;
 import io.xerousso.courageous.world.gen.ModFeatures;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -21,20 +20,20 @@ public class BiomeSteppe extends Biome {
                 .depth(0.2f)
                 .scale(0.02f)
 
-                .waterColor(0x5fcfdf)
-                .waterFogColor(0x58bdcc)
+//                .waterColor(0x5fcfdf)
+//                .waterFogColor(0x58bdcc)
 
                 .parent((String) null));
 
         DefaultBiomeFeatures.addLakes(this);
         DefaultBiomeFeatures.addSedimentDisks(this);
-        DefaultBiomeFeatures.addStructures(this);
+//        DefaultBiomeFeatures.addStructures(this);
 
         ModFeatures.addUndergroundFeatures(this);
         ModFeatures.addSparseSavannaTrees(this);
         ModFeatures.addSavannaStructures(this);
 
-        ModFeatures.addPlant(this, ModBlocks.STEPPE_GRASS.getDefaultState(), 45);
+//        ModFeatures.addPlant(this, ModBlocks.STEPPE_GRASS.getDefaultState(), 45);
 
         this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.SHEEP, 12, 4, 4));
         this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.PIG, 10, 4, 4));

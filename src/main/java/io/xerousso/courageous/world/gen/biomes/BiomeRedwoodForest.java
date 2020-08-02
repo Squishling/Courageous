@@ -1,13 +1,11 @@
 package io.xerousso.courageous.world.gen.biomes;
 
-import io.xerousso.courageous.blocks.ModBlocks;
 import io.xerousso.courageous.world.gen.ModFeatures;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
-import net.minecraftforge.common.IPlantable;
 
 public class BiomeRedwoodForest extends Biome {
 
@@ -23,8 +21,8 @@ public class BiomeRedwoodForest extends Biome {
                 .depth(0.5f)
                 .scale(0.1f)
 
-                .waterColor(0x02367e)
-                .waterFogColor(0x2158a5)
+//                .waterColor(0x02367e)
+//                .waterFogColor(0x2158a5)
 
                 .parent((String) null));
 
@@ -33,7 +31,7 @@ public class BiomeRedwoodForest extends Biome {
         DefaultBiomeFeatures.addReedsAndPumpkins(this);
         DefaultBiomeFeatures.addFreezeTopLayer(this);
         DefaultBiomeFeatures.addSprings(this);
-        DefaultBiomeFeatures.addStructures(this);
+//        DefaultBiomeFeatures.addStructures(this);
 
         ModFeatures.addUndergroundFeatures(this);
         ModFeatures.addVegetation(this);
@@ -42,8 +40,8 @@ public class BiomeRedwoodForest extends Biome {
         ModFeatures.addVilage(this, "taiga");
 
 //        ModFeatures.addTree(this, ModFeatures.GIANT_REDWOOD_TREE, 8, 0.1f, 1);
-        ModFeatures.addGiantSpruceTree(this, ModBlocks.REDWOOD_LOG.getDefaultState(), ModBlocks.REDWOOD_LEAVES.getDefaultState(), (IPlantable) ModBlocks.REDWOOD_SAPLING, 3, 0.1f, 1);
-        ModFeatures.addTree(this, ModFeatures.ALPINE_TREE, 3, 0.1f, 1);
+//        ModFeatures.addGiantSpruceTree(this, ModBlocks.REDWOOD_LOG.getDefaultState(), ModBlocks.REDWOOD_LEAVES.getDefaultState(), (IPlantable) ModBlocks.REDWOOD_SAPLING, 3, 0.1f, 1);
+//        ModFeatures.addTree(this, ModFeatures.ALPINE_TREE, 3, 0.1f, 1);
         ModFeatures.addSparseTrees(this);
 
         this.addSpawn(EntityClassification.CREATURE, new SpawnListEntry(EntityType.SHEEP, 12, 4, 4));

@@ -1,12 +1,12 @@
 package io.xerousso.courageous.util;
 
-import io.xerousso.courageous.blocks.ModBlocks;
+import io.xerousso.courageous.blocks.Blockz;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.ILightReader;
+import net.minecraft.world.IBlockDisplayReader;
 import net.minecraft.world.biome.BiomeColors;
 
 import javax.annotation.Nullable;
@@ -23,12 +23,12 @@ public class ModBlockColors implements IBlockColor {
     private static HashMap<Block, Integer> BLOCKS = new HashMap<Block, Integer>();
 
     @Override
-    public int getColor(BlockState blockState, @Nullable ILightReader iLightReader, @Nullable BlockPos blockPos, int i) {
+    public int getColor(BlockState blockState, @Nullable IBlockDisplayReader blockDisplayReader, @Nullable BlockPos blockPos, int p_getColor_4_) {
         for (Block block : BLOCKS.keySet()) if (blockState.getBlock().equals(block)) return BLOCKS.get(block);
-        for (Block block : LEAVES) if (blockState.getBlock().equals(block)) return BiomeColors.getFoliageColor(iLightReader, blockPos);
+        for (Block block : LEAVES) if (blockState.getBlock().equals(block)) return BiomeColors.getFoliageColor(blockDisplayReader, blockPos);
 
-        if (blockState.getBlock() == ModBlocks.MAPLE_LEAVES) {
-            int rgb = BiomeColors.getFoliageColor(iLightReader, blockPos);
+        if (blockState.getBlock() == Blockz.MAPLE_LEAVES.get()) {
+            int rgb = BiomeColors.getFoliageColor(blockDisplayReader, blockPos);
             int green = (rgb >> 8) & 0xFF;
             int blue = rgb & 0xFF;
 
@@ -58,16 +58,16 @@ public class ModBlockColors implements IBlockColor {
     }
 
     public static void registerBlockColors() {
-        registerBlock(ModBlocks.PALM_LEAVES, 0xe1ff43);
+        registerBlock(Blockz.PALM_LEAVES.get(), 0xe1ff43);
 
         registerAllFoliage (
-            ModBlocks.ALPINE_LEAVES, ModBlocks.PEAR_LEAVES,    ModBlocks.ORANGE_LEAVES,
-            ModBlocks.APPLE_LEAVES,  ModBlocks.AVOCADO_LEAVES, ModBlocks.KIWI_FRUIT_LEAVES,
-            ModBlocks.LEMON_LEAVES,  ModBlocks.PLUM_LEAVES,    ModBlocks.FALLEN_LEAVES,
-            ModBlocks.DOUGLAS_FIR_LEAVES
+            Blockz.ALPINE_LEAVES.get(), Blockz.PEAR_LEAVES.get(),    Blockz.ORANGE_LEAVES.get(),
+            Blockz.APPLE_LEAVES.get(),  Blockz.AVOCADO_LEAVES.get(), Blockz.KIWI_FRUIT_LEAVES.get(),
+            Blockz.LEMON_LEAVES.get(),  Blockz.PLUM_LEAVES.get(),    Blockz.FALLEN_LEAVES.get(),
+            Blockz.DOUGLAS_FIR_LEAVES.get()
         );
 
-        Minecraft.getInstance().getBlockColors().register(INSTANCE, ModBlocks.MAPLE_LEAVES);
+        Minecraft.getInstance().getBlockColors().register(INSTANCE, Blockz.MAPLE_LEAVES.get());
 
         for (Block block : BLOCKS.keySet()) Minecraft.getInstance().getBlockColors().register(INSTANCE, block);
         for (Block block : LEAVES) Minecraft.getInstance().getBlockColors().register(INSTANCE, block);

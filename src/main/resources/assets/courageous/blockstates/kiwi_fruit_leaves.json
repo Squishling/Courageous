@@ -7,7 +7,10 @@
       { "model": "courageous:block/kiwi_fruit_leaves/kiwi_fruit_leaves_3" },
       { "model": "courageous:block/kiwi_fruit_leaves/kiwi_fruit_leaves_4" },
       { "model": "courageous:block/kiwi_fruit_leaves/kiwi_fruit_leaves_5" },
-      { "model": "courageous:block/kiwi_fruit_leaves/kiwi_fruit_leaves_6" }
+      { "model": "courageous:block/kiwi_fruit_leaves/kiwi_fruit_leaves_6" },
+      { "model": "courageous:block/kiwi_fruit_leaves/kiwi_fruit_leaves_7" },
+      { "model": "courageous:block/kiwi_fruit_leaves/kiwi_fruit_leaves_8" }
+
     ],
     "grown=false": { "model": "block/oak_leaves" }
   }

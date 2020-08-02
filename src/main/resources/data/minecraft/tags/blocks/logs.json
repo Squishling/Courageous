@@ -1,13 +1,6 @@
 {
     "replace": false,
     "values": [
-        "courageous:palm_log",
-        "courageous:maple_log",
-        "courageous:maple_log_syrup",
-        "courageous:redwood_log",
 
-        "courageous:stripped_palm_log",
-        "courageous:stripped_maple_log",
-        "courageous:stripped_redwood_log"
     ]
 }

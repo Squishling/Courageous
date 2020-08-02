@@ -1,6 +1,6 @@
 package io.xerousso.courageous.blocks.vegetation;
 
-import io.xerousso.courageous.items.ModItems;
+import io.xerousso.courageous.items.Itemz;
 import io.xerousso.courageous.util.Util;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -22,12 +22,12 @@ import net.minecraft.world.server.ServerWorld;
 
 import java.util.Random;
 
-public class MapleLog extends CustomLog {
+public class MapleLog extends LogBlock {
 
     public static final BooleanProperty GROWN = BooleanProperty.create("grown");
 
-    public MapleLog(String name, MaterialColor color) {
-        super(name, color);
+    public MapleLog() {
+        super(MaterialColor.WOOD, MaterialColor.ADOBE);
         this.setDefaultState(this.stateContainer.getBaseState().with(GROWN, false).with(AXIS, Axis.Y));
     }
 
@@ -45,11 +45,13 @@ public class MapleLog extends CustomLog {
 
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (Util.isServer(worldIn)) if (state.get(GROWN) && player.getHeldItem(handIn).getItem().equals(Items.GLASS_BOTTLE)) {
-            player.getHeldItem(handIn).setCount(player.getHeldItem(handIn).getCount() - 1);
-            if (!player.inventory.addItemStackToInventory(new ItemStack(ModItems.MAPLE_SYRUP))) spawnAsEntity(worldIn, pos, new ItemStack(ModItems.MAPLE_SYRUP, 1));
+        if (Util.isServer(worldIn) && state.get(GROWN) && player.getHeldItem(handIn).getItem().equals(Items.GLASS_BOTTLE)) {
+            if (!player.isCreative()) player.getHeldItem(handIn).setCount(player.getHeldItem(handIn).getCount() - 1);
+            if (!player.inventory.addItemStackToInventory(new ItemStack(Itemz.MAPLE_SYRUP.get()))) spawnAsEntity(worldIn, pos, new ItemStack(Itemz.MAPLE_SYRUP.get(), 1));
+
             worldIn.playSound((PlayerEntity)null, pos, SoundEvents.ENTITY_GENERIC_DRINK, SoundCategory.BLOCKS, 1.0F, 0.8F + worldIn.rand.nextFloat() * 0.4F);
             worldIn.setBlockState(pos, state.with(GROWN, false), 2);
+
             return ActionResultType.SUCCESS;
         }
 

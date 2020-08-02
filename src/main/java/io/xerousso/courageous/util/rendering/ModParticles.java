@@ -6,8 +6,8 @@ import net.minecraft.particles.ParticleType;
 
 public class ModParticles {
 
-    public static ParticleType<FallingWaterParticleData> FALLING_WATER_PARTICLE = new ParticleType<>(false, FallingWaterParticleData.DESERIALIZER);
-    public static ParticleType<BlockParticleData> FALLING_FLUID_PARTICLE = new ParticleType<>(false, BlockParticleData.DESERIALIZER);
-    public static IParticleData FALLING_WATER_PARTICLE_DATA = new FallingWaterParticleData();
+//    public static ParticleType<FallingWaterParticleData> FALLING_WATER_PARTICLE = new ParticleType<>(false, FallingWaterParticleData.DESERIALIZER);
+//    public static ParticleType<BlockParticleData> FALLING_FLUID_PARTICLE = new ParticleType<>(false, BlockParticleData.DESERIALIZER);
+//    public static IParticleData FALLING_WATER_PARTICLE_DATA = new FallingWaterParticleData();
 
 }

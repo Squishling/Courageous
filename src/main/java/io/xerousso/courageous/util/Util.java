@@ -28,8 +28,8 @@ public class Util {
         for (Food food : foods) {
             points += food.getHealing();
             saturation += food.getSaturation();
-            for (Pair<EffectInstance, Float> effect : food.getEffects()) {
-                effects.add(effect);
+            for (com.mojang.datafixers.util.Pair<EffectInstance, Float> effect : food.getEffects()) {
+//                effects.add(effect);
             }
         }
 

@@ -20,13 +20,13 @@ public class BiomeBungleBungles extends Biome {
                 .depth(0.3F)
                 .scale(1F)
 
-                .waterColor(0x64abfb)
-                .waterFogColor(0x64c2fb)
+//                .waterColor(0x64abfb)
+//                .waterFogColor(0x64c2fb)
 
                 .parent((String) null));
 
         DefaultBiomeFeatures.addSedimentDisks(this);
-        DefaultBiomeFeatures.addStructures(this);
+//        DefaultBiomeFeatures.addStructures(this);
 
         ModFeatures.addUndergroundFeatures(this);
 

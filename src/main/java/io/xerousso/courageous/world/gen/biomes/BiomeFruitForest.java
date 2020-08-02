@@ -4,6 +4,7 @@ import io.xerousso.courageous.world.gen.ModFeatures;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeAmbience;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
@@ -20,8 +21,11 @@ public class BiomeFruitForest extends Biome {
                 .downfall(0.8F)
                 .precipitation(RainType.RAIN)
 
-                .waterColor(4159204)
-                .waterFogColor(329011)
+                .func_235097_a_(new BiomeAmbience.Builder()
+                        .setWaterColor(4159204)
+                        .setWaterFogColor(329011)
+                        .setFogColor(0xffffff)
+                        .build())
 
                 .parent((String)null));
 

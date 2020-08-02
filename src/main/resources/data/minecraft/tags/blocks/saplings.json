@@ -1,16 +1,6 @@
 {
   "replace": false,
   "values": [
-    "courageous:palm_sapling",
-    "courageous:maple_sapling",
-    "courageous:pear_sapling",
-    "courageous:alpine_sapling",
-    "courageous:redwood_sapling",
-    "courageous:orange_sapling",
-    "courageous:lemon_sapling",
-    "courageous:plum_sapling",
-    "courageous:avocado_sapling",
-    "courageous:kiwi_fruit_sapling",
-    "courageous:apple_sapling"
+
   ]
 }

@@ -1,7 +1,5 @@
 package io.xerousso.courageous.util;
 
-import io.xerousso.courageous.blocks.ModBlocks;
-import io.xerousso.courageous.blocks.planter_box.PlanterBoxTileEntity;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.AxeItem;
@@ -19,7 +17,6 @@ import net.minecraftforge.eventbus.api.Event.Result;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.items.CapabilityItemHandler;
 
 import java.util.HashMap;
 
@@ -61,13 +58,13 @@ public class EventHandler {
 
         if (block.getBlock() == Blocks.COMPOSTER && item instanceof BlockItem && !ComposterBlock.CHANCES.containsKey(item)) {
             if (state.get(ComposterBlock.LEVEL) == 0) {
-                world.setBlockState(pos, ModBlocks.PLANTER_BOX.getDefaultState(), 2);
-                if (world.getTileEntity(pos) instanceof PlanterBoxTileEntity) {
-                    ((PlanterBoxTileEntity) world.getTileEntity(pos)).getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-                        if (handler.getStackInSlot(0).isEmpty())
-                            handler.insertItem(0, new ItemStack(stack.getItem(), 1), false);
-                    });
-                }
+//                world.setBlockState(pos, ModBlocks.PLANTER_BOX.getDefaultState(), 2);
+//                if (world.getTileEntity(pos) instanceof PlanterBoxTileEntity) {
+//                    ((PlanterBoxTileEntity) world.getTileEntity(pos)).getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+//                        if (handler.getStackInSlot(0).isEmpty())
+//                            handler.insertItem(0, new ItemStack(stack.getItem(), 1), false);
+//                    });
+//                }
                 stack.shrink(1);
                 event.setCanceled(true);
             }

@@ -1,9 +1,12 @@
 package io.xerousso.courageous.blocks;
 
-import io.xerousso.courageous.tiles.TileFaucet;
+//import io.xerousso.courageous.tiles.TileFaucet;
+import io.xerousso.courageous.items.IItem;
+import io.xerousso.courageous.tabs.GeneralTab;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.state.StateContainer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
@@ -18,7 +21,7 @@ import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 
 import javax.annotation.Nullable;
 
-public class BlockBambooFaucet extends HorizontalBlock implements IForgeBlock {
+public class BlockBambooFaucet extends HorizontalBlock implements IForgeBlock, IItem {
     private final static VoxelShape SHAPE_NORTH = Block.makeCuboidShape(6.5, 3, 10, 9.5, 6, 16);
     private final static VoxelShape SHAPE_EAST = Block.makeCuboidShape(0, 3, 6.5, 6, 6, 9.5);
     private final static VoxelShape SHAPE_SOUTH = Block.makeCuboidShape(6.5, 3, 0, 9.5, 6, 6);
@@ -39,10 +42,10 @@ public class BlockBambooFaucet extends HorizontalBlock implements IForgeBlock {
         return true;
     }
 
-    @Override
-    public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return new TileFaucet();
-    }
+//    @Override
+//    public TileEntity createTileEntity(BlockState state, IBlockReader world) {
+//        return new TileFaucet();
+//    }
 
     @Override
     public boolean isValidPosition(BlockState p_196260_1_, IWorldReader p_196260_2_, BlockPos p_196260_3_) {
@@ -113,5 +116,9 @@ public class BlockBambooFaucet extends HorizontalBlock implements IForgeBlock {
         p_206840_1_.add(HORIZONTAL_FACING);
     }
 
+    @Override
+    public ItemGroup getTab() {
+        return GeneralTab.GENERAL;
+    }
 
 }

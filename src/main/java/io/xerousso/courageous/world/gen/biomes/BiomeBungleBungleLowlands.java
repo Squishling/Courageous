@@ -1,6 +1,6 @@
 package io.xerousso.courageous.world.gen.biomes;
 
-import io.xerousso.courageous.world.gen.BiomeRegistry;
+
 import io.xerousso.courageous.world.gen.ModFeatures;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -24,13 +24,13 @@ public class BiomeBungleBungleLowlands extends Biome {
                 .depth(0.1F)
                 .scale(0F)
 
-                .waterColor(0x64abfb)
-                .waterFogColor(0x64c2fb)
+//                .waterColor(0x64abfb)
+//                .waterFogColor(0x64c2fb)
 
                 .parent((String) null));
 
         DefaultBiomeFeatures.addSedimentDisks(this);
-        DefaultBiomeFeatures.addStructures(this);
+//        DefaultBiomeFeatures.addStructures(this);
 
         ModFeatures.addUndergroundFeatures(this);
 
@@ -55,9 +55,9 @@ public class BiomeBungleBungleLowlands extends Biome {
         return 0x53b65f;
     }
 
-    @Nullable
-    @Override
-    public Biome getHill(INoiseRandom rand) {
-        return BiomeRegistry.BUNGLE_BUNGLES;
-    }
+//    @Nullable
+//    @Override
+//    public Biome getHill(INoiseRandom rand) {
+//        return BiomeRegistry.BUNGLE_BUNGLES;
+//    }
 }
