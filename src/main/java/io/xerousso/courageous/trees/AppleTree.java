@@ -20,4 +20,3 @@ public class AppleTree extends Tree {
     }
 
 }
-            

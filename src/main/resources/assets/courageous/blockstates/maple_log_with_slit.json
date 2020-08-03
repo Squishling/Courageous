@@ -10,7 +10,6 @@
       "x": 90,
       "y": 90
     },
-
     "grown=true,axis=y": { "model": "courageous:block/maple_log/maple_log_grown" },
     "grown=true,axis=z": {
       "model": "courageous:block/maple_log/maple_log_grown",

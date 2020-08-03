@@ -62,7 +62,7 @@ public class ModFeatures {
                 , new BlobFoliagePlacer(2, 0, 0, 0, 3), new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build();
     public static final Function<Supplier<LeavesBlock>, BaseTreeFeatureConfig> MAPLE_TREE_CONFIG = leaves ->
             (new BaseTreeFeatureConfig.Builder(new WeightedBlockStateProvider()
-                    .addWeightedBlockstate(Blockz.MAPLE_LOG.get().getDefaultState(), 4)
+                    .addWeightedBlockstate(Blockz.MAPLE_LOG.get().getDefaultState(), 7)
                     .addWeightedBlockstate(Blockz.MAPLE_LOG_SYRUP.get().getDefaultState(), 1)
                     , new SimpleBlockStateProvider(leaves.get().getDefaultState().with(LeavesBlock.DISTANCE, 1)), new BlobFoliagePlacer(2, 0, 0, 0, 3), new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build();
 
