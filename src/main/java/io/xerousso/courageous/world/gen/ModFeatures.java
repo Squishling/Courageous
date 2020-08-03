@@ -103,8 +103,12 @@ public class ModFeatures {
 
     public static void addAutumnalTrees(Biome biome) {
         addDefaultTrees(biome, 4, 0.1f, 1);
-//        addTree(biome, MAPLE_TREE, 4, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.MAPLE_LEAVES.get())), 4, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.GREEN_MAPLE_LEAVES.get())), 3, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.YELLOW_MAPLE_LEAVES.get())), 2, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.ORANGE_MAPLE_LEAVES.get())), 3, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.RED_MAPLE_LEAVES.get())), 3, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.BROWN_MAPLE_LEAVES.get())), 1, 0.1f, 1);
+
     }
 
     public static void addRocks(Biome biome, BlockState state, int frequency) {

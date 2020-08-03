@@ -27,21 +27,6 @@ public class ModBlockColors implements IBlockColor {
         for (Block block : BLOCKS.keySet()) if (blockState.getBlock().equals(block)) return BLOCKS.get(block);
         for (Block block : LEAVES) if (blockState.getBlock().equals(block)) return BiomeColors.getFoliageColor(blockDisplayReader, blockPos);
 
-        if (blockState.getBlock() == Blockz.MAPLE_LEAVES.get()) {
-            int rgb = BiomeColors.getFoliageColor(blockDisplayReader, blockPos);
-            int green = (rgb >> 8) & 0xFF;
-            int blue = rgb & 0xFF;
-
-            green *= 0.4;
-            blue *= 0.4;
-
-            rgb = 0xFF;
-            rgb = (rgb << 8) + green;
-            rgb = (rgb << 8) + blue;
-
-            return rgb;
-        }
-
         return 0;
     }
 
@@ -60,14 +45,18 @@ public class ModBlockColors implements IBlockColor {
     public static void registerBlockColors() {
         registerBlock(Blockz.PALM_LEAVES.get(), 0xe1ff43);
 
+        registerBlock(Blockz.GREEN_MAPLE_LEAVES.get(), 0x85b82a);
+        registerBlock(Blockz.YELLOW_MAPLE_LEAVES.get(), 0xceb72d);
+        registerBlock(Blockz.ORANGE_MAPLE_LEAVES.get(), 0xce862d);
+        registerBlock(Blockz.RED_MAPLE_LEAVES.get(), 0xce4d2d);
+        registerBlock(Blockz.BROWN_MAPLE_LEAVES.get(), 0x9f4924);
+
         registerAllFoliage (
             Blockz.ALPINE_LEAVES.get(), Blockz.PEAR_LEAVES.get(),    Blockz.ORANGE_LEAVES.get(),
             Blockz.APPLE_LEAVES.get(),  Blockz.AVOCADO_LEAVES.get(), Blockz.KIWI_FRUIT_LEAVES.get(),
             Blockz.LEMON_LEAVES.get(),  Blockz.PLUM_LEAVES.get(),    Blockz.FALLEN_LEAVES.get(),
             Blockz.DOUGLAS_FIR_LEAVES.get()
         );
-
-        Minecraft.getInstance().getBlockColors().register(INSTANCE, Blockz.MAPLE_LEAVES.get());
 
         for (Block block : BLOCKS.keySet()) Minecraft.getInstance().getBlockColors().register(INSTANCE, block);
         for (Block block : LEAVES) Minecraft.getInstance().getBlockColors().register(INSTANCE, block);

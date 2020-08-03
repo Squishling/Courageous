@@ -49,7 +49,11 @@ public class Blockz {
     public static RegistryObject<Block> ORANGE_LEAVES = BLOCKS.register("orange_leaves", () -> new HarvestableLeaves(Itemz.ORANGE::get).setMinMax(1, 2));
 
 //    public static final Block MAPLE_SAPLING = new CustomSapling("maple_sapling", new MapleTree());
-    public static RegistryObject<Block> MAPLE_LEAVES = BLOCKS.register("maple_leaves", Leaves::new);
+    public static RegistryObject<Block> GREEN_MAPLE_LEAVES = BLOCKS.register("green_maple_leaves", Leaves::new);
+    public static RegistryObject<Block> YELLOW_MAPLE_LEAVES = BLOCKS.register("yellow_maple_leaves", Leaves::new);
+    public static RegistryObject<Block> ORANGE_MAPLE_LEAVES = BLOCKS.register("orange_maple_leaves", Leaves::new);
+    public static RegistryObject<Block> RED_MAPLE_LEAVES = BLOCKS.register("red_maple_leaves", Leaves::new);
+    public static RegistryObject<Block> BROWN_MAPLE_LEAVES = BLOCKS.register("brown_maple_leaves", Leaves::new);
     public static RegistryObject<Block> MAPLE_LOG = BLOCKS.register("maple_log", () -> new LogBlock(MaterialColor.DIRT, MaterialColor.IRON));
     public static RegistryObject<Block> MAPLE_LOG_SYRUP = BLOCKS.register("maple_log_with_slit", MapleLog::new);
     public static RegistryObject<Block> STRIPPED_MAPLE_LOG = BLOCKS.register("stripped_maple_log", () -> new LogBlock(MaterialColor.DIRT, MaterialColor.DIRT));

@@ -17,7 +17,7 @@ public class MapleTree extends Tree {
     @Nullable
     @Override
     protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
-        return Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.MAPLE_LEAVES.get()));
+        return Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.ORANGE_MAPLE_LEAVES.get()));
     }
 
 }
