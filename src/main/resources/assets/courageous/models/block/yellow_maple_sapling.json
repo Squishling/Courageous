@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "layer0": "courageous:block/yellow_maple_sapling"
+  }
+}

@@ -6,6 +6,7 @@ import io.xerousso.courageous.blocks.Blockz;
 //import io.xerousso.courageous.world.gen.features.trees.*;
 //import io.xerousso.courageous.world.gen.features.trees.fruit.*;
 import io.xerousso.courageous.blocks.vegetation.HarvestableLeaves;
+import io.xerousso.courageous.blocks.vegetation.MapleLog;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.LeavesBlock;
@@ -62,11 +63,25 @@ public class ModFeatures {
                 , new BlobFoliagePlacer(2, 0, 0, 0, 3), new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build();
     public static final Function<Supplier<LeavesBlock>, BaseTreeFeatureConfig> MAPLE_TREE_CONFIG = leaves ->
             (new BaseTreeFeatureConfig.Builder(new WeightedBlockStateProvider()
-                    .addWeightedBlockstate(Blockz.MAPLE_LOG.get().getDefaultState(), 7)
+                    .addWeightedBlockstate(Blockz.MAPLE_LOG.get().getDefaultState(), 14)
                     .addWeightedBlockstate(Blockz.MAPLE_LOG_SYRUP.get().getDefaultState(), 1)
+                    .addWeightedBlockstate(Blockz.MAPLE_LOG_SYRUP.get().getDefaultState().with(MapleLog.GROWN, true), 1)
                     , new SimpleBlockStateProvider(leaves.get().getDefaultState().with(LeavesBlock.DISTANCE, 1)), new BlobFoliagePlacer(2, 0, 0, 0, 3), new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build();
 
-//    public static Structure<NoFeatureConfig> ARABIAN_VILLAGE = new ArabianVillage(NoFeatureConfig.field_236558_a_);
+    public static final BaseTreeFeatureConfig APPLE_TREE_CONFIG = ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.APPLE_LEAVES.get());
+    public static final BaseTreeFeatureConfig PEAR_TREE_CONFIG = ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.PEAR_LEAVES.get());
+    public static final BaseTreeFeatureConfig ORANGE_TREE_CONFIG = ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.ORANGE_LEAVES.get());
+    public static final BaseTreeFeatureConfig PLUM_TREE_CONFIG = ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.PLUM_LEAVES.get());
+    public static final BaseTreeFeatureConfig LEMON_TREE_CONFIG = ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.LEMON_LEAVES.get());
+    public static final BaseTreeFeatureConfig AVOCADO_TREE_CONFIG = ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.AVOCADO_LEAVES.get());
+    public static final BaseTreeFeatureConfig KIWI_FRUIT_TREE_CONFIG = ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.KIWI_FRUIT_LEAVES.get());
+
+    public static final BaseTreeFeatureConfig GREEN_MAPLE_TREE_CONFIG = ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.GREEN_MAPLE_LEAVES.get());
+    public static final BaseTreeFeatureConfig YELLOW_MAPLE_TREE_CONFIG = ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.YELLOW_MAPLE_LEAVES.get());
+    public static final BaseTreeFeatureConfig ORANGE_MAPLE_TREE_CONFIG = ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.ORANGE_MAPLE_LEAVES.get());
+    public static final BaseTreeFeatureConfig RED_MAPLE_TREE_CONFIG = ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.RED_MAPLE_LEAVES.get());
+    public static final BaseTreeFeatureConfig BROWN_MAPLE_TREE_CONFIG = ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.BROWN_MAPLE_LEAVES.get());
+    //    public static Structure<NoFeatureConfig> ARABIAN_VILLAGE = new ArabianVillage(NoFeatureConfig.field_236558_a_);
 
 //    public static void addAlpineTrees(Biome biome) {
 //        addTree(biome, ALPINE_TREE, 5, 0.1f, 1);
@@ -91,23 +106,23 @@ public class ModFeatures {
 //    }
 
     public static void addFruitForestTrees(Biome biome) {
-        addDefaultTrees(biome, 4, 0.1f, 2);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.PEAR_LEAVES.get())), 1, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.ORANGE_LEAVES.get())), 1, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.LEMON_LEAVES.get())), 1, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.PLUM_LEAVES.get())), 1, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.AVOCADO_LEAVES.get())), 1, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.APPLE_LEAVES.get())), 1, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.FRUIT_TREE_CONFIG.apply(() -> (HarvestableLeaves) Blockz.KIWI_FRUIT_LEAVES.get())), 1, 0.1f, 1);
+        addDefaultTrees(biome, 3, 0.1f, 2);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(APPLE_TREE_CONFIG), 1, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(PEAR_TREE_CONFIG), 1, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(ORANGE_TREE_CONFIG), 1, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(PLUM_TREE_CONFIG), 1, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(LEMON_TREE_CONFIG), 1, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(AVOCADO_TREE_CONFIG), 1, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(KIWI_FRUIT_TREE_CONFIG), 1, 0.1f, 1);
     }
 
     public static void addAutumnalTrees(Biome biome) {
         addDefaultTrees(biome, 4, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.GREEN_MAPLE_LEAVES.get())), 3, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.YELLOW_MAPLE_LEAVES.get())), 2, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.ORANGE_MAPLE_LEAVES.get())), 3, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.RED_MAPLE_LEAVES.get())), 3, 0.1f, 1);
-        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.BROWN_MAPLE_LEAVES.get())), 1, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(GREEN_MAPLE_TREE_CONFIG), 1, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(YELLOW_MAPLE_TREE_CONFIG), 2, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(ORANGE_MAPLE_TREE_CONFIG), 3, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(RED_MAPLE_TREE_CONFIG), 3, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(BROWN_MAPLE_TREE_CONFIG), 1, 0.1f, 1);
 
     }
 

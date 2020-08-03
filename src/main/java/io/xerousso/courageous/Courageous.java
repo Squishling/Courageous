@@ -104,9 +104,7 @@ public class Courageous {
     private void clientRegistry(final FMLClientSetupEvent event) {
         LOGGER.info("Client setup");
 
-//        for (Block block : Blockz.BLOCKS) {
-//            if (block instanceof BushBlock || block instanceof LeavesBlock || block instanceof LeavesLike) RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
-//        }
+        Blockz.setRenderLayers();
 //        RenderTypeLookup.setRenderLayer(ModBlocks.FLUID_POT.get(), RenderType.getCutout());
 //        RenderTypeLookup.setRenderLayer(ModBlocks.DISTILLER.get(), RenderType.getCutout());
 

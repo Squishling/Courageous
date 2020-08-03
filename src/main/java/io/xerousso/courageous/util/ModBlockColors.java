@@ -46,8 +46,8 @@ public class ModBlockColors implements IBlockColor {
         registerBlock(Blockz.PALM_LEAVES.get(), 0xe1ff43);
 
         registerBlock(Blockz.GREEN_MAPLE_LEAVES.get(), 0x85b82a);
-        registerBlock(Blockz.YELLOW_MAPLE_LEAVES.get(), 0xceb72d);
-        registerBlock(Blockz.ORANGE_MAPLE_LEAVES.get(), 0xce862d);
+        registerBlock(Blockz.YELLOW_MAPLE_LEAVES.get(), 0xffe33d);
+        registerBlock(Blockz.ORANGE_MAPLE_LEAVES.get(), 0xff8826);
         registerBlock(Blockz.RED_MAPLE_LEAVES.get(), 0xce4d2d);
         registerBlock(Blockz.BROWN_MAPLE_LEAVES.get(), 0x9f4924);
 

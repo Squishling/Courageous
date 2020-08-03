@@ -2,18 +2,31 @@ package io.xerousso.courageous.blocks;
 
 import io.xerousso.courageous.blocks.pot.BlockFluidPotBase;
 import io.xerousso.courageous.blocks.vegetation.*;
+import io.xerousso.courageous.items.IItem;
 import io.xerousso.courageous.items.Itemz;
 import io.xerousso.courageous.trees.*;
 import io.xerousso.courageous.util.Util;
+import io.xerousso.courageous.world.gen.ModFeatures;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.block.trees.Tree;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import javax.annotation.Nullable;
+import java.util.Random;
 
 public class Blockz {
 
@@ -49,6 +62,41 @@ public class Blockz {
     public static RegistryObject<Block> ORANGE_LEAVES = BLOCKS.register("orange_leaves", () -> new HarvestableLeaves(Itemz.ORANGE::get).setMinMax(1, 2));
 
 //    public static final Block MAPLE_SAPLING = new CustomSapling("maple_sapling", new MapleTree());
+    public static RegistryObject<Block> GREEN_MAPLE_SAPLING = BLOCKS.register("green_maple_sapling", () -> new Sapling(() -> new Tree() {
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
+            return Feature.field_236291_c_.withConfiguration(ModFeatures.GREEN_MAPLE_TREE_CONFIG);
+        }
+    }));
+    public static RegistryObject<Block> YELLOW_MAPLE_SAPLING = BLOCKS.register("yellow_maple_sapling", () -> new Sapling(() -> new Tree() {
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
+            return Feature.field_236291_c_.withConfiguration(ModFeatures.YELLOW_MAPLE_TREE_CONFIG);
+        }
+    }));
+    public static RegistryObject<Block> ORANGE_MAPLE_SAPLING = BLOCKS.register("orange_maple_sapling", () -> new Sapling(() -> new Tree() {
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
+            return Feature.field_236291_c_.withConfiguration(ModFeatures.ORANGE_MAPLE_TREE_CONFIG);
+        }
+    }));
+    public static RegistryObject<Block> RED_MAPLE_SAPLING = BLOCKS.register("red_maple_sapling", () -> new Sapling(() -> new Tree() {
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
+            return Feature.field_236291_c_.withConfiguration(ModFeatures.RED_MAPLE_TREE_CONFIG);
+        }
+    }));
+    public static RegistryObject<Block> BROWN_MAPLE_SAPLING = BLOCKS.register("brown_maple_sapling", () -> new Sapling(() -> new Tree() {
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
+            return Feature.field_236291_c_.withConfiguration(ModFeatures.BROWN_MAPLE_TREE_CONFIG);
+        }
+    }));
     public static RegistryObject<Block> GREEN_MAPLE_LEAVES = BLOCKS.register("green_maple_leaves", Leaves::new);
     public static RegistryObject<Block> YELLOW_MAPLE_LEAVES = BLOCKS.register("yellow_maple_leaves", Leaves::new);
     public static RegistryObject<Block> ORANGE_MAPLE_LEAVES = BLOCKS.register("orange_maple_leaves", Leaves::new);
@@ -99,5 +147,13 @@ public class Blockz {
     public static final RegistryObject<Block> UNFIRED_FLUID_POT = BLOCKS.register("unfired_fluid_pot", () -> new BlockFluidPotBase(Block.Properties.create(Material.CLAY).sound(SoundType.GROUND).hardnessAndResistance(0.6F)));
 //    public static final RegistryObject<Block> DISTILLER = BLOCKS.register("distiller", BlockDistiller::new);
     public static final RegistryObject<Block> FAUCET = BLOCKS.register("bamboo_faucet", BlockBambooFaucet::new);
+
+    public static void setRenderLayers() {
+        for (RegistryObject<Block> block : Blockz.BLOCKS.getEntries()) {
+            if (block.get() instanceof Sapling || block.get() instanceof Leaves || block.get() instanceof LeavesLike || block.get() instanceof Bush) {
+                RenderTypeLookup.setRenderLayer(block.get(), RenderType.getCutout());
+            }
+        }
+    }
 
 }

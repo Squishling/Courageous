@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "courageous:block/maple/maple_sapling"
+    "layer0": "courageous:block/brown_maple_sapling"
   }
 }

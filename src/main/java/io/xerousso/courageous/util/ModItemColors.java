@@ -48,8 +48,8 @@ public class ModItemColors implements IItemColor {
         registerItem(Blockz.APPLE_LEAVES.get(), 0x59ae30);
 
         registerItem(Blockz.GREEN_MAPLE_LEAVES.get(), 0x85b82a);
-        registerItem(Blockz.YELLOW_MAPLE_LEAVES.get(), 0xceb72d);
-        registerItem(Blockz.ORANGE_MAPLE_LEAVES.get(), 0xce862d);
+        registerItem(Blockz.YELLOW_MAPLE_LEAVES.get(), 0xffe33d);
+        registerItem(Blockz.ORANGE_MAPLE_LEAVES.get(), 0xff8826);
         registerItem(Blockz.RED_MAPLE_LEAVES.get(), 0xce4d2d);
         registerItem(Blockz.BROWN_MAPLE_LEAVES.get(), 0x9f4924);
 
