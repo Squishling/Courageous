@@ -1,20 +1,23 @@
-//package io.xerousso.courageous.trees;
-//
-//import io.xerousso.courageous.world.gen.ModFeatures;
-//import net.minecraft.block.trees.Tree;
-//import net.minecraft.world.biome.DefaultBiomeFeatures;
-//import net.minecraft.world.gen.feature.AbstractTreeFeature;
-//import net.minecraft.world.gen.feature.ConfiguredFeature;
-//import net.minecraft.world.gen.feature.TreeFeatureConfig;
-//
-//import javax.annotation.Nullable;
-//import java.util.Random;
-//
-//public class MapleTree extends Tree {
-//
-//    @Nullable
-//    @Override
-//    protected ConfiguredFeature<TreeFeatureConfig, ?> getTreeFeature(Random random, boolean b) {
-//        return ModFeatures.MAPLE_TREE.withConfiguration(DefaultBiomeFeatures.OAK_TREE_CONFIG);
-//    }
-//}
+package io.xerousso.courageous.trees;
+
+import io.xerousso.courageous.blocks.Blockz;
+import io.xerousso.courageous.blocks.vegetation.HarvestableLeaves;
+import io.xerousso.courageous.world.gen.ModFeatures;
+import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.trees.Tree;
+import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.Feature;
+
+import javax.annotation.Nullable;
+import java.util.Random;
+
+public class MapleTree extends Tree {
+
+    @Nullable
+    @Override
+    protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
+        return Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.MAPLE_LEAVES.get()));
+    }
+
+}

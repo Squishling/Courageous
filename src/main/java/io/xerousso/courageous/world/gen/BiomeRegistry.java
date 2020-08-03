@@ -55,8 +55,8 @@ public class BiomeRegistry {
 
     @SubscribeEvent
     public static void registerBiomes(final RegistryEvent.Register<Biome> event) {
-        FRUIT_FOREST = registerStandardBiome(new BiomeFruitForest(), BiomeType.COOL, "fruitful_forest", 300, Type.FOREST, Type.COLD, Type.DENSE);
-//        AUTUMNAL_FOREST = registerStandardBiome(new BiomeAutumnalForest(), BiomeType.COOL, "autumnal_forest", 200, Type.FOREST, Type.COLD, Type.DENSE);
+        FRUIT_FOREST = registerStandardBiome(new BiomeFruitForest(), BiomeType.COOL, "fruitful_forest", 100, Type.FOREST, Type.COLD, Type.DENSE);
+        AUTUMNAL_FOREST = registerStandardBiome(new BiomeAutumnalForest(), BiomeType.COOL, "autumnal_forest", 200, Type.FOREST, Type.COLD, Type.DENSE);
 
 //        ALPINE_FOREST = registerStandardBiome(new BiomeAlpineForest(), BiomeType.COOL, "alpine_forest", 11, Type.FOREST, Type.COLD, Type.CONIFEROUS, Type.HILLS);
 //        SPARSE_ALPINE_FOREST = registerStandardBiome(new BiomeSparseAlpineForest(), BiomeType.COOL, "sparse_alpine_forest", 8, Type.FOREST, Type.COLD, Type.CONIFEROUS, Type.HILLS);

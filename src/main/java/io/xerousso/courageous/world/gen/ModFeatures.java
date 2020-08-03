@@ -8,6 +8,7 @@ import io.xerousso.courageous.blocks.Blockz;
 import io.xerousso.courageous.blocks.vegetation.HarvestableLeaves;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.WeightedList;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
@@ -59,6 +60,11 @@ public class ModFeatures {
                 .addWeightedBlockstate(leaves.get().getDefaultState(), 2)
                 .addWeightedBlockstate(leaves.get().getDefaultState().with(HarvestableLeaves.GROWN, true), 1)
                 , new BlobFoliagePlacer(2, 0, 0, 0, 3), new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build();
+    public static final Function<Supplier<LeavesBlock>, BaseTreeFeatureConfig> MAPLE_TREE_CONFIG = leaves ->
+            (new BaseTreeFeatureConfig.Builder(new WeightedBlockStateProvider()
+                    .addWeightedBlockstate(Blockz.MAPLE_LOG.get().getDefaultState(), 4)
+                    .addWeightedBlockstate(Blockz.MAPLE_LOG_SYRUP.get().getDefaultState(), 1)
+                    , new SimpleBlockStateProvider(leaves.get().getDefaultState().with(LeavesBlock.DISTANCE, 1)), new BlobFoliagePlacer(2, 0, 0, 0, 3), new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build();
 
 //    public static Structure<NoFeatureConfig> ARABIAN_VILLAGE = new ArabianVillage(NoFeatureConfig.field_236558_a_);
 
@@ -98,6 +104,7 @@ public class ModFeatures {
     public static void addAutumnalTrees(Biome biome) {
         addDefaultTrees(biome, 4, 0.1f, 1);
 //        addTree(biome, MAPLE_TREE, 4, 0.1f, 1);
+        addTree(biome, Feature.field_236291_c_.withConfiguration(ModFeatures.MAPLE_TREE_CONFIG.apply(() -> (LeavesBlock) Blockz.MAPLE_LEAVES.get())), 4, 0.1f, 1);
     }
 
     public static void addRocks(Biome biome, BlockState state, int frequency) {

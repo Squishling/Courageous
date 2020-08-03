@@ -26,6 +26,7 @@ public class BiomeAutumnalForest extends Biome {
                 .func_235097_a_(new BiomeAmbience.Builder()
                         .setWaterColor(4159204)
                         .setWaterFogColor(329011)
+                        .setFogColor(0xffffff)
                         .build())
                 .parent((String)null));
 

@@ -1,6 +1,5 @@
 package io.xerousso.courageous.blocks.vegetation;
 
-import com.sun.javafx.geom.Vec3d;
 import io.xerousso.courageous.items.IItem;
 import io.xerousso.courageous.tabs.WorldTab;
 import net.minecraft.block.*;
