@@ -1,0 +1,6 @@
+{
+    "parent": "courageous:block/fallen_leaves",
+    "textures": {
+        "all": "courageous:block/maple/maple_leaves"
+    }
+}

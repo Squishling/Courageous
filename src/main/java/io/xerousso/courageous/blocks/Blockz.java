@@ -62,6 +62,12 @@ public class Blockz {
     public static RegistryObject<Block> ORANGE_LEAVES = BLOCKS.register("orange_leaves", () -> new HarvestableLeaves(Itemz.ORANGE::get).setMinMax(1, 2));
 
 //    public static final Block MAPLE_SAPLING = new CustomSapling("maple_sapling", new MapleTree());
+
+
+
+
+
+
     public static RegistryObject<Block> GREEN_MAPLE_SAPLING = BLOCKS.register("green_maple_sapling", () -> new Sapling(() -> new Tree() {
         @Nullable
         @Override
@@ -69,6 +75,9 @@ public class Blockz {
             return Feature.field_236291_c_.withConfiguration(ModFeatures.GREEN_MAPLE_TREE_CONFIG);
         }
     }));
+    public static RegistryObject<Block> GREEN_MAPLE_LEAVES = BLOCKS.register("green_maple_leaves", Leaves::new);
+    public static RegistryObject<Block> FALLEN_GREEN_MAPLE_LEAVES = BLOCKS.register("fallen_green_maple_leaves", FallenLeaves::new);
+
     public static RegistryObject<Block> YELLOW_MAPLE_SAPLING = BLOCKS.register("yellow_maple_sapling", () -> new Sapling(() -> new Tree() {
         @Nullable
         @Override
@@ -76,6 +85,9 @@ public class Blockz {
             return Feature.field_236291_c_.withConfiguration(ModFeatures.YELLOW_MAPLE_TREE_CONFIG);
         }
     }));
+    public static RegistryObject<Block> YELLOW_MAPLE_LEAVES = BLOCKS.register("yellow_maple_leaves", Leaves::new);
+    public static RegistryObject<Block> FALLEN_YELLOW_MAPLE_LEAVES = BLOCKS.register("fallen_yellow_maple_leaves", FallenLeaves::new);
+
     public static RegistryObject<Block> ORANGE_MAPLE_SAPLING = BLOCKS.register("orange_maple_sapling", () -> new Sapling(() -> new Tree() {
         @Nullable
         @Override
@@ -83,6 +95,9 @@ public class Blockz {
             return Feature.field_236291_c_.withConfiguration(ModFeatures.ORANGE_MAPLE_TREE_CONFIG);
         }
     }));
+    public static RegistryObject<Block> ORANGE_MAPLE_LEAVES = BLOCKS.register("orange_maple_leaves", Leaves::new);
+    public static RegistryObject<Block> FALLEN_ORANGE_MAPLE_LEAVES = BLOCKS.register("fallen_orange_maple_leaves", FallenLeaves::new);
+
     public static RegistryObject<Block> RED_MAPLE_SAPLING = BLOCKS.register("red_maple_sapling", () -> new Sapling(() -> new Tree() {
         @Nullable
         @Override
@@ -90,6 +105,9 @@ public class Blockz {
             return Feature.field_236291_c_.withConfiguration(ModFeatures.RED_MAPLE_TREE_CONFIG);
         }
     }));
+    public static RegistryObject<Block> RED_MAPLE_LEAVES = BLOCKS.register("red_maple_leaves", Leaves::new);
+    public static RegistryObject<Block> FALLEN_RED_MAPLE_LEAVES = BLOCKS.register("fallen_red_maple_leaves", FallenLeaves::new);
+
     public static RegistryObject<Block> BROWN_MAPLE_SAPLING = BLOCKS.register("brown_maple_sapling", () -> new Sapling(() -> new Tree() {
         @Nullable
         @Override
@@ -97,11 +115,9 @@ public class Blockz {
             return Feature.field_236291_c_.withConfiguration(ModFeatures.BROWN_MAPLE_TREE_CONFIG);
         }
     }));
-    public static RegistryObject<Block> GREEN_MAPLE_LEAVES = BLOCKS.register("green_maple_leaves", Leaves::new);
-    public static RegistryObject<Block> YELLOW_MAPLE_LEAVES = BLOCKS.register("yellow_maple_leaves", Leaves::new);
-    public static RegistryObject<Block> ORANGE_MAPLE_LEAVES = BLOCKS.register("orange_maple_leaves", Leaves::new);
-    public static RegistryObject<Block> RED_MAPLE_LEAVES = BLOCKS.register("red_maple_leaves", Leaves::new);
     public static RegistryObject<Block> BROWN_MAPLE_LEAVES = BLOCKS.register("brown_maple_leaves", Leaves::new);
+    public static RegistryObject<Block> FALLEN_BROWN_MAPLE_LEAVES = BLOCKS.register("fallen_brown_maple_leaves", FallenLeaves::new);
+
     public static RegistryObject<Block> MAPLE_LOG = BLOCKS.register("maple_log", () -> new LogBlock(MaterialColor.DIRT, MaterialColor.IRON));
     public static RegistryObject<Block> MAPLE_LOG_SYRUP = BLOCKS.register("maple_log_with_slit", MapleLog::new);
     public static RegistryObject<Block> STRIPPED_MAPLE_LOG = BLOCKS.register("stripped_maple_log", () -> new LogBlock(MaterialColor.DIRT, MaterialColor.DIRT));

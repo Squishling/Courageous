@@ -123,7 +123,11 @@ public class ModFeatures {
         addTree(biome, Feature.field_236291_c_.withConfiguration(ORANGE_MAPLE_TREE_CONFIG), 3, 0.1f, 1);
         addTree(biome, Feature.field_236291_c_.withConfiguration(RED_MAPLE_TREE_CONFIG), 3, 0.1f, 1);
         addTree(biome, Feature.field_236291_c_.withConfiguration(BROWN_MAPLE_TREE_CONFIG), 1, 0.1f, 1);
-
+        addPlant(biome, Blockz.FALLEN_GREEN_MAPLE_LEAVES.get().getDefaultState(), 2);
+        addPlant(biome, Blockz.FALLEN_YELLOW_MAPLE_LEAVES.get().getDefaultState(), 2);
+        addPlant(biome, Blockz.FALLEN_ORANGE_MAPLE_LEAVES.get().getDefaultState(), 2);
+        addPlant(biome, Blockz.FALLEN_RED_MAPLE_LEAVES.get().getDefaultState(), 2);
+        addPlant(biome, Blockz.FALLEN_BROWN_MAPLE_LEAVES.get().getDefaultState(), 2);
     }
 
     public static void addRocks(Biome biome, BlockState state, int frequency) {

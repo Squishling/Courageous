@@ -53,6 +53,12 @@ public class ModItemColors implements IItemColor {
         registerItem(Blockz.RED_MAPLE_LEAVES.get(), 0xce4d2d);
         registerItem(Blockz.BROWN_MAPLE_LEAVES.get(), 0x9f4924);
 
+        registerItem(Blockz.FALLEN_GREEN_MAPLE_LEAVES.get(), 0x85b82a);
+        registerItem(Blockz.FALLEN_YELLOW_MAPLE_LEAVES.get(), 0xffe33d);
+        registerItem(Blockz.FALLEN_ORANGE_MAPLE_LEAVES.get(), 0xff8826);
+        registerItem(Blockz.FALLEN_RED_MAPLE_LEAVES.get(), 0xce4d2d);
+        registerItem(Blockz.FALLEN_BROWN_MAPLE_LEAVES.get(), 0x9f4924);
+
         registerItem(Blockz.FALLEN_LEAVES.get(), 0x59ae30);
 
         for (Item item : ITEMS.keySet()) Minecraft.getInstance().getItemColors().register(INSTANCE, item);
