@@ -2,6 +2,8 @@ package io.xerousso.courageous;
 
 import io.xerousso.courageous.blocks.Blockz;
 import io.xerousso.courageous.items.Itemz;
+import io.xerousso.courageous.recipes.Recipez;
+import io.xerousso.courageous.tiles.Tilez;
 import io.xerousso.courageous.util.*;
 import io.xerousso.courageous.util.config.ConfigHandler;
 import io.xerousso.courageous.util.networking.ModPacketHandler;
@@ -9,7 +11,6 @@ import io.xerousso.courageous.world.gen.ModFeatures;
 import net.minecraft.block.Block;
 import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.item.Item;
 import net.minecraft.particles.ParticleType;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.SoundEvent;
@@ -33,7 +34,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Mod(Util.MOD_ID)
 public class Courageous {
@@ -56,11 +58,10 @@ public class Courageous {
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new EventHandler());
 
-//        ModRecipes.RECIPE_SERIALIZERS.register(FMLJavaModLoadingContext.get().getModEventBus());
         Blockz.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         Itemz.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-//        ModTiles.TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
-//        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        Tilez.TILES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        Recipez.RECIPE_SERIALIZERS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     // Preinit
@@ -105,8 +106,6 @@ public class Courageous {
         LOGGER.info("Client setup");
 
         Blockz.setRenderLayers();
-//        RenderTypeLookup.setRenderLayer(ModBlocks.FLUID_POT.get(), RenderType.getCutout());
-//        RenderTypeLookup.setRenderLayer(ModBlocks.DISTILLER.get(), RenderType.getCutout());
 
 //        ClientRegistry.bindTileEntityRenderer(ModTileEntities.POTTERY_WHEEL, PotteryWheelTESR::new);
 //        ClientRegistry.bindTileEntityRenderer(ModTileEntities.CUTTING_BOARD, CuttingBoardTER::new);

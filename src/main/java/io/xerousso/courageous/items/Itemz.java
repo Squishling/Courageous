@@ -4,9 +4,7 @@ import io.xerousso.courageous.blocks.Blockz;
 import io.xerousso.courageous.items.pottery.Amphora;
 import io.xerousso.courageous.items.pottery.WateringCan;
 import io.xerousso.courageous.items.sandwich.Sandwich;
-import io.xerousso.courageous.tabs.FoodTab;
 import io.xerousso.courageous.tabs.PotteryTab;
-//import io.xerousso.courageous.tabs.WorldTab;
 import io.xerousso.courageous.tabs.WorldTab;
 import io.xerousso.courageous.util.Util;
 import net.minecraft.block.Block;
@@ -21,7 +19,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.ArrayList;
+//import io.xerousso.courageous.tabs.WorldTab;
 
 public class Itemz {
 

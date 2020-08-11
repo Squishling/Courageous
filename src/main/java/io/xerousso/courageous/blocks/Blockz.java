@@ -1,8 +1,9 @@
 package io.xerousso.courageous.blocks;
 
+import io.xerousso.courageous.blocks.pot.BlockDistiller;
+import io.xerousso.courageous.blocks.pot.BlockFluidPot;
 import io.xerousso.courageous.blocks.pot.BlockFluidPotBase;
 import io.xerousso.courageous.blocks.vegetation.*;
-import io.xerousso.courageous.items.IItem;
 import io.xerousso.courageous.items.Itemz;
 import io.xerousso.courageous.trees.*;
 import io.xerousso.courageous.util.Util;
@@ -15,8 +16,6 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -61,11 +60,10 @@ public class Blockz {
     public static RegistryObject<Block> ORANGE_SAPLING = BLOCKS.register("orange_sapling", () -> new Sapling(OrangeTree::new));
     public static RegistryObject<Block> ORANGE_LEAVES = BLOCKS.register("orange_leaves", () -> new HarvestableLeaves(Itemz.ORANGE::get).setMinMax(1, 2));
 
+    public static RegistryObject<Block> FLUID_POT = BLOCKS.register("fluid_pot", BlockFluidPot::new);
+    public static RegistryObject<Block> DISTILLER = BLOCKS.register("distiller", BlockDistiller::new);
+
 //    public static final Block MAPLE_SAPLING = new CustomSapling("maple_sapling", new MapleTree());
-
-
-
-
 
 
     public static RegistryObject<Block> GREEN_MAPLE_SAPLING = BLOCKS.register("green_maple_sapling", () -> new Sapling(() -> new Tree() {
@@ -170,6 +168,9 @@ public class Blockz {
                 RenderTypeLookup.setRenderLayer(block.get(), RenderType.getCutout());
             }
         }
+
+        RenderTypeLookup.setRenderLayer(FLUID_POT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(DISTILLER.get(), RenderType.getCutout());
     }
 
 }

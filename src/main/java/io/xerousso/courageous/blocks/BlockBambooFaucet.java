@@ -3,6 +3,7 @@ package io.xerousso.courageous.blocks;
 //import io.xerousso.courageous.tiles.TileFaucet;
 import io.xerousso.courageous.items.IItem;
 import io.xerousso.courageous.tabs.GeneralTab;
+import io.xerousso.courageous.tiles.TileFaucet;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItemUseContext;
@@ -42,18 +43,17 @@ public class BlockBambooFaucet extends HorizontalBlock implements IForgeBlock, I
         return true;
     }
 
-//    @Override
-//    public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-//        return new TileFaucet();
-//    }
+    @Override
+    public TileEntity createTileEntity(BlockState state, IBlockReader world) {
+        return new TileFaucet();
+    }
 
     @Override
-    public boolean isValidPosition(BlockState p_196260_1_, IWorldReader p_196260_2_, BlockPos p_196260_3_) {
-        return this.canAttachTo(p_196260_2_, p_196260_3_.offset(p_196260_1_.get(HORIZONTAL_FACING).getOpposite()), p_196260_1_.get(HORIZONTAL_FACING));
+    public boolean isValidPosition(BlockState state, IWorldReader reader, BlockPos pos) {
+        return this.canAttachTo(reader, pos.offset(state.get(HORIZONTAL_FACING).getOpposite()), state.get(HORIZONTAL_FACING));
     }
 
     private boolean canAttachTo(IBlockReader reader, BlockPos pos, Direction direction) {
-        //457 94 689
         if (reader.getTileEntity(pos) == null) return false;
         else
             return reader.getTileEntity(pos).getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, direction).isPresent();
