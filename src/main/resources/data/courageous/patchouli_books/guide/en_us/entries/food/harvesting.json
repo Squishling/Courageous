@@ -14,10 +14,10 @@
     {
       "type": "two_to_one",
       "anchor": "maple_syrup",
-      "item1": "courageous:maple_log_syrup",
+      "item1": "courageous:maple_log_with_slit",
       "item2": "minecraft:glass_bottle",
       "item3": "courageous:maple_syrup",
-      "text": "You can also get maple syrup from $(l:exploration/trees#maple_tree)maple tree$()s, by right clicking on the slit in their trunk with a glass bottle while it has syrup; the syrup will 'grow' back.  Drinking maple syrup can give you food points, saturation and a short boost of speed."
+      "text": "You can get maple syrup from $(l:exploration/trees#maple_tree)maple tree$()s by right clicking on the slit in their trunk with a glass bottle while it has syrup; the syrup will 'grow' back.  Drinking maple syrup can give you food points, saturation and a short boost of speed."
     }
   ]
 }

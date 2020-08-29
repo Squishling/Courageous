@@ -1,6 +1,7 @@
 //package io.xerousso.courageous.blocks.planter_box;
 //
 //import io.xerousso.courageous.blocks.IBlock;
+//import io.xerousso.courageous.blocks.vegetation.LogBlock;
 //import io.xerousso.courageous.tabs.GeneralTab;
 //import io.xerousso.courageous.util.lib.DefaultBlockProperties;
 //import net.minecraft.block.*;

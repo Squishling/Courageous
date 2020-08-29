@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "type": "header",
+      "text": "#title",
+      "x": 57,
+      "y": 0
+    },
+    {
+      "type": "separator",
+      "x": -1,
+      "y": -1
+    },
+    {
+      "type": "text",
+      "text": "#text",
+      "y": 45
+    }
+  ],
+  "include": [
+    {
+      "template": "food_widget",
+      "as": "widget",
+      "using": {
+        "food": "#food",
+        "hunger": "#hunger",
+        "hunger_half": "#hunger_half",
+        "saturation": "#saturation"
+      },
+      "y": 21
+    }
+  ]
+}

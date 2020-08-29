@@ -22,6 +22,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class BlockDistiller extends BlockFluidPot {
+
     public static final DirectionProperty HORIZONTAL_FACING = HorizontalBlock.HORIZONTAL_FACING;
 
     public BlockDistiller() {
@@ -82,4 +83,5 @@ public class BlockDistiller extends BlockFluidPot {
         //TODO: Use a better way of finding the item than this
         return new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation(Util.MOD_ID, Blockz.FAUCET.get().getRegistryName().getPath())));
     }
+
 }

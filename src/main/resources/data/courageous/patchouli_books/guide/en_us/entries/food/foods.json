@@ -4,40 +4,64 @@
   "category": "food_category",
   "pages": [
     {
-      "type": "spotlight",
+      "type": "food",
       "anchor": "avocado",
-      "item": "courageous:avocado",
-      "text": "Food Points: 2$(br)Saturation: 0.1$()$(br)Obtained From: $(l:food/harvesting)Harvesting$() an $(l:exploration/trees#avocado_tree)avocado tree$()."
+      "food": "courageous:avocado",
+      "title": "Avocado",
+      "hunger": "2",
+      "hunger_half": "1",
+      "saturation": "0.1",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() an $(l:exploration/trees#avocado_tree)avocado tree$()."
     },
     {
-      "type": "spotlight",
+      "type": "food",
       "anchor": "orange",
-      "item": "courageous:orange",
-      "text": "Food Points: 3$(br)Saturation: 0.3$()$(br)Obtained From: $(l:food/harvesting)Harvesting$() an $(l:exploration/trees#orange_tree)orange tree$()."
+      "food": "courageous:orange",
+      "title": "Orange",
+      "hunger": "3",
+      "hunger_half": "1.5",
+      "saturation": "0.3",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() an $(l:exploration/trees#orange_tree)orange tree$()."
     },
     {
-      "type": "spotlight",
+      "type": "food",
       "anchor": "pear",
-      "item": "courageous:pear",
-      "text": "Food Points: 2$(br)Saturation: 0.1$()$(br)Obtained From: $(l:food/harvesting)Harvesting$() an $(l:exploration/trees#pear_tree)pear tree$()."
+      "food": "courageous:pear",
+      "title": "Pear",
+      "hunger": "4",
+      "hunger_half": "2",
+      "saturation": "0.4",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() an $(l:exploration/trees#pear_tree)pear tree$()."
     },
     {
-      "type": "spotlight",
+      "type": "food",
       "anchor": "plum",
-      "item": "courageous:plum",
-      "text": "Food Points: 3$(br)Saturation: 0.3$()$(br)Obtained From: $(l:food/harvesting)Harvesting$() a $(l:exploration/trees#plum)plum tree$()."
+      "food": "courageous:plum",
+      "title": "Plum",
+      "hunger": "3",
+      "hunger_half": "1.5",
+      "saturation": "0.3",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() a $(l:exploration/trees#plum)plum tree$()."
     },
     {
-      "type": "spotlight",
+      "type": "food",
       "anchor": "lemon",
-      "item": "courageous:lemon",
-      "text": "Food Points: 1$(br)Saturation: 0.15$()$(br)Obtained From: $(l:food/harvesting)Harvesting$() a $(l:exploration/trees#lemon_tree)lemon tree$()."
+      "food": "courageous:lemon",
+      "title": "Lemon",
+      "hunger": "1",
+      "hunger_half": "0.5",
+      "saturation": "0.15",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() a $(l:exploration/trees#lemon_tree)lemon tree$()."
     },
     {
-      "type": "spotlight",
+      "type": "food",
       "anchor": "kiwi_fruit",
-      "item": "courageous:kiwi_fruit",
-      "text": "Food Points: 3$(br)Saturation: 0.35$()$(br)Obtained From: $(l:food/harvesting)Harvesting$() a $(l:exploration/trees#kiwi_fruit_tree)kiwi fruit tree$()."
+      "food": "courageous:kiwi_fruit",
+      "title": "Kiwi Fruit",
+      "hunger": "3",
+      "hunger_half": "1.5",
+      "saturation": "0.35",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() a $(l:exploration/trees#kiwi_fruit_tree)kiwi fruit tree$()."
     }
   ]
 }

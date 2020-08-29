@@ -1,8 +1,11 @@
 package io.xerousso.courageous.blocks;
 
+//import io.xerousso.courageous.blocks.cutting_board.CuttingBoard;
+//import io.xerousso.courageous.blocks.planter_box.PlanterBoxBlock;
 import io.xerousso.courageous.blocks.pot.BlockDistiller;
 import io.xerousso.courageous.blocks.pot.BlockFluidPot;
 import io.xerousso.courageous.blocks.pot.BlockFluidPotBase;
+import io.xerousso.courageous.blocks.pottery_wheel.PotteryWheel;
 import io.xerousso.courageous.blocks.vegetation.*;
 import io.xerousso.courageous.items.Itemz;
 import io.xerousso.courageous.trees.*;
@@ -59,12 +62,6 @@ public class Blockz {
 
     public static RegistryObject<Block> ORANGE_SAPLING = BLOCKS.register("orange_sapling", () -> new Sapling(OrangeTree::new));
     public static RegistryObject<Block> ORANGE_LEAVES = BLOCKS.register("orange_leaves", () -> new HarvestableLeaves(Itemz.ORANGE::get).setMinMax(1, 2));
-
-    public static RegistryObject<Block> FLUID_POT = BLOCKS.register("fluid_pot", BlockFluidPot::new);
-    public static RegistryObject<Block> DISTILLER = BLOCKS.register("distiller", BlockDistiller::new);
-
-//    public static final Block MAPLE_SAPLING = new CustomSapling("maple_sapling", new MapleTree());
-
 
     public static RegistryObject<Block> GREEN_MAPLE_SAPLING = BLOCKS.register("green_maple_sapling", () -> new Sapling(() -> new Tree() {
         @Nullable
@@ -148,7 +145,7 @@ public class Blockz {
 
     public static RegistryObject<Block> FALLEN_LEAVES = BLOCKS.register("fallen_leaves", FallenLeaves::new);
 
-//    public static RegistryObject<Block> POTTERY_WHEEL = BLOCKS.register("pottery_wheel", PotteryWheel::new);
+    public static RegistryObject<Block> POTTERY_WHEEL = BLOCKS.register("pottery_wheel", PotteryWheel::new);
 //    public static RegistryObject<Block> CUTTING_BOARD = BLOCKS.register("cutting_board", CuttingBoard::new);
 //    public static RegistryObject<Block> ARCHITECTS_TABLE = BLOCKS.register("architects_table", ArchitectsTable::new);
 
@@ -157,9 +154,9 @@ public class Blockz {
 
 //    public static RegistryObject<Block> PLANTER_BOX = BLOCKS.register("planter_box", PlanterBoxBlock::new);
 
-//    public static final RegistryObject<Block> FLUID_POT = BLOCKS.register("fluid_pot", BlockFluidPot::new);
+    public static RegistryObject<Block> FLUID_POT = BLOCKS.register("fluid_pot", BlockFluidPot::new);
+    public static RegistryObject<Block> DISTILLER = BLOCKS.register("distiller", BlockDistiller::new);
     public static final RegistryObject<Block> UNFIRED_FLUID_POT = BLOCKS.register("unfired_fluid_pot", () -> new BlockFluidPotBase(Block.Properties.create(Material.CLAY).sound(SoundType.GROUND).hardnessAndResistance(0.6F)));
-//    public static final RegistryObject<Block> DISTILLER = BLOCKS.register("distiller", BlockDistiller::new);
     public static final RegistryObject<Block> FAUCET = BLOCKS.register("bamboo_faucet", BlockBambooFaucet::new);
 
     public static void setRenderLayers() {

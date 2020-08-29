@@ -1,6 +1,6 @@
 //package io.xerousso.courageous.blocks.cutting_board;
 //
-//import io.xerousso.courageous.blocks.IBlock;
+//import io.xerousso.courageous.items.IItem;
 //import io.xerousso.courageous.tabs.GeneralTab;
 //import io.xerousso.courageous.util.Util;
 //import net.minecraft.block.AbstractBlock.Properties;
@@ -30,12 +30,12 @@
 //
 //import javax.annotation.Nullable;
 //
-//public class CuttingBoard extends BlockBase implements IBlock {
+//public class CuttingBoard extends Block implements IItem {
 //
 //    private static final VoxelShape SHAPE = VoxelShapes.combine(Block.makeCuboidShape(3d, 0d, 0d, 13d, 1d, 16d), Block.makeCuboidShape(6d, 0d, 14d, 10d, 1d, 15d), IBooleanFunction.ONLY_FIRST);
 //
 //    public CuttingBoard() {
-//        super("cutting_board", Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD));
+//        super(Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD));
 //    }
 //
 //    @Override

@@ -1,6 +1,6 @@
 {
   "name": "Trees",
-  "icon": "courageous:redwood_sapling",
+  "icon": "courageous:red_maple_sapling",
   "category": "exploration_category",
   "pages": [
     {
@@ -140,22 +140,40 @@
       "type": "multiblock",
       "name": "Palm Tree",
       "enable_visualize": false,
-      "text": "The beautiful palm tree can be found spread around the $(l:exploration/biomes#lush_desert)lush desert$().",
+      "text": "The beautiful palm tree can be found spread around the $(l:exploration/biomes#oasis)oasis$().",
       "anchor": "palm_tree",
       "multiblock": {
         "mapping": {
           "T": "courageous:palm_log",
           "0": "courageous:palm_log",
-          "L": "courageous:palm_leaves"
+          "N": "courageous:palm_leaves[facing=north]",
+          "E": "courageous:palm_leaves[facing=east]",
+          "S": "courageous:palm_leaves[facing=south]",
+          "W": "courageous:palm_leaves[facing=west]",
+          "U": "courageous:palm_leaves[facing=up]"
         },
         "pattern": [
-          ["       ","   L   ", "   L   ", " LLLLL ", "   L   ", "   L   ", "       "],
-          ["   L   ","   L   ", "       ", "LL T LL", "       ", "   L   ", "   L   "],
-          ["   L   ","       ", "       ", "L  T  L", "       ", "       ", "   L   "],
-          ["       ","       ", "       ", "   T   ", "       ", "       ", "       "],
-          ["       ","       ", "       ", "   T   ", "       ", "       ", "       "],
-          ["       ","       ", "       ", "   T   ", "       ", "       ", "       "],
-          ["       ","       ", "       ", "   0   ", "       ", "       ", "       "]
+          ["         ", "    W    ", "    W    ", "         ", " NN   SS ", "         ", "    E    ", "    E    ", "         "],
+          ["         ", "         ", "    W    ", "   NWW   ", "  NN SS  ", "   NEE   ", "    E    ", "         ", "         "],
+          ["         ", "         ", "         ", "    W    ", "   NUS   ", "    E    ", "         ", "         ", "         "],
+          ["    W    ", "    W    ", "    W    ", "   NWW   ", "NNNNTSSSS", "   NEE   ", "    E    ", "    E    ", "    E    "],
+          ["         ", "         ", "         ", "    W    ", "   NTS   ", "    E    ", "         ", "         ", "         "],
+          ["         ", "         ", "    W    ", "   NWW   ", "  NNTSS  ", "   NEE   ", "    E    ", "         ", "         "],
+          ["         ", "    W    ", "    W    ", "         ", " NN T SS ", "         ", "    E    ", "    E    ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    T    ", "         ", "         ", "         ", "         "],
+          ["         ", "         ", "         ", "         ", "    0    ", "         ", "         ", "         ", "         "]
         ],
         "symmetrical": false
       }
@@ -193,16 +211,116 @@
     },
     {
       "type": "multiblock",
-      "name": "Maple Tree",
+      "name": "Green Maple Tree",
       "enable_visualize": false,
-      "text": "The maple tree allows you to collect $(l:food/harvesting#maple_syrup)maple syrup$() from its bark, and is found in $(l:exploration/biomes#autumnal_forest)Autumnal Forest$()s.",
-      "anchor": "maple_tree",
+      "text": "The green maple tree allows you to collect $(l:food/harvesting#maple_syrup)maple syrup$() from its bark, and is found in $(l:exploration/biomes#autumnal_forest)Autumnal Forest$()s.",
+      "anchor": "green_maple_tree",
       "multiblock": {
         "mapping": {
           "T": "courageous:maple_log",
-          "S": "courageous:maple_log_syrup",
+          "S": "courageous:maple_log_with_slit",
           "0": "courageous:maple_log",
-          "L": "courageous:maple_leaves"
+          "L": "courageous:green_maple_leaves"
+        },
+        "pattern": [
+          ["     ", "  L  ", " LLL ", "  L  ", "     "],
+          ["     ", " LL  ", " LTL ", " LLL ", "     "],
+          [" LLLL", "LLLLL", "LLTLL", "LLLLL", " LLL "],
+          [" LLL ", "LLLLL", "LLTLL", "LLLLL", "LLLLL"],
+          ["     ", "     ", "  T  ", "     ", "     "],
+          ["     ", "     ", "  S  ", "     ", "     "],
+          ["     ", "     ", "  0  ", "     ", "     "]
+        ],
+        "symmetrical": false
+      }
+    },
+    {
+      "type": "multiblock",
+      "name": "Yellow Maple Tree",
+      "enable_visualize": false,
+      "text": "The yellow maple tree allows you to collect $(l:food/harvesting#maple_syrup)maple syrup$() from its bark, and is found in $(l:exploration/biomes#autumnal_forest)Autumnal Forest$()s.",
+      "anchor": "yellow_maple_tree",
+      "multiblock": {
+        "mapping": {
+          "T": "courageous:maple_log",
+          "S": "courageous:maple_log_with_slit",
+          "0": "courageous:maple_log",
+          "L": "courageous:yellow_maple_leaves"
+        },
+        "pattern": [
+          ["     ", "  L  ", " LLL ", "  L  ", "     "],
+          ["     ", " LL  ", " LTL ", " LLL ", "     "],
+          [" LLLL", "LLLLL", "LLTLL", "LLLLL", " LLL "],
+          [" LLL ", "LLLLL", "LLTLL", "LLLLL", "LLLLL"],
+          ["     ", "     ", "  T  ", "     ", "     "],
+          ["     ", "     ", "  S  ", "     ", "     "],
+          ["     ", "     ", "  0  ", "     ", "     "]
+        ],
+        "symmetrical": false
+      }
+    },
+    {
+      "type": "multiblock",
+      "name": "Orange Maple Tree",
+      "enable_visualize": false,
+      "text": "The orange maple tree allows you to collect $(l:food/harvesting#maple_syrup)maple syrup$() from its bark, and is found in $(l:exploration/biomes#autumnal_forest)Autumnal Forest$()s.",
+      "anchor": "orange_maple_tree",
+      "multiblock": {
+        "mapping": {
+          "T": "courageous:maple_log",
+          "S": "courageous:maple_log_with_slit",
+          "0": "courageous:maple_log",
+          "L": "courageous:orange_maple_leaves"
+        },
+        "pattern": [
+          ["     ", "  L  ", " LLL ", "  L  ", "     "],
+          ["     ", " LL  ", " LTL ", " LLL ", "     "],
+          [" LLLL", "LLLLL", "LLTLL", "LLLLL", " LLL "],
+          [" LLL ", "LLLLL", "LLTLL", "LLLLL", "LLLLL"],
+          ["     ", "     ", "  T  ", "     ", "     "],
+          ["     ", "     ", "  S  ", "     ", "     "],
+          ["     ", "     ", "  0  ", "     ", "     "]
+        ],
+        "symmetrical": false
+      }
+    },
+    {
+      "type": "multiblock",
+      "name": "Red Maple Tree",
+      "enable_visualize": false,
+      "text": "The red maple tree allows you to collect $(l:food/harvesting#maple_syrup)maple syrup$() from its bark, and is found in $(l:exploration/biomes#autumnal_forest)Autumnal Forest$()s.",
+      "anchor": "red_maple_tree",
+      "multiblock": {
+        "mapping": {
+          "T": "courageous:maple_log",
+          "S": "courageous:maple_log_with_slit",
+          "0": "courageous:maple_log",
+          "L": "courageous:red_maple_leaves"
+        },
+        "pattern": [
+          ["     ", "  L  ", " LLL ", "  L  ", "     "],
+          ["     ", " LL  ", " LTL ", " LLL ", "     "],
+          [" LLLL", "LLLLL", "LLTLL", "LLLLL", " LLL "],
+          [" LLL ", "LLLLL", "LLTLL", "LLLLL", "LLLLL"],
+          ["     ", "     ", "  T  ", "     ", "     "],
+          ["     ", "     ", "  S  ", "     ", "     "],
+          ["     ", "     ", "  0  ", "     ", "     "]
+        ],
+        "symmetrical": false
+      }
+    },
+    {
+      "type": "multiblock",
+      "name": "Brown Maple Tree",
+      "enable_visualize": false,
+      "text": "The brown maple tree allows you to collect $(l:food/harvesting#maple_syrup)maple syrup$() from its bark, and is found in $(l:exploration/biomes#autumnal_forest)Autumnal Forest$()s.",
+      "anchor": "brown_maple_tree",
+      "multiblock": {
+        "mapping": {
+          "T": "courageous:maple_log",
+          "S": "courageous:maple_log_with_slit",
+          "0": "courageous:maple_log",
+          "L": "courageous:brown_maple_leaves"
         },
         "pattern": [
           ["     ", "  L  ", " LLL ", "  L  ", "     "],
