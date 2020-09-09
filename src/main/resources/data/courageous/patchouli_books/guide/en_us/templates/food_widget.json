@@ -1,0 +1,74 @@
+{
+  "components": [
+    {
+      "type": "image",
+      "image": "courageous:textures/gui/patchouli/guis.png",
+      "width": 64,
+      "height": 24,
+      "v": 47,
+      "texture_width": 128,
+      "texture_height": 128,
+      "x": 26,
+      "y": 0
+    },
+    {
+      "type": "item",
+      "item": "#food",
+      "x": 50,
+      "y": 3
+    },
+    {
+      "type": "image",
+      "image": "courageous:textures/gui/patchouli/guis.png",
+      "width": 9,
+      "height": 9,
+      "u": 9,
+      "v": 119,
+      "texture_width": 128,
+      "texture_height": 128,
+      "x": 0,
+      "y": 27
+    },
+    {
+      "type": "image",
+      "image": "courageous:textures/gui/patchouli/guis.png",
+      "width": 9,
+      "height": 9,
+      "v": 119,
+      "texture_width": 128,
+      "texture_height": 128,
+      "x": 38,
+      "y": 27
+    },
+    {
+      "type": "image",
+      "image": "courageous:textures/gui/patchouli/guis.png",
+      "width": 9,
+      "height": 9,
+      "u": 18,
+      "v": 119,
+      "texture_width": 128,
+      "texture_height": 128,
+      "x": 76,
+      "y": 27
+    },
+    {
+      "type": "text",
+      "text": "#hunger",
+      "x": 15,
+      "y": 27
+    },
+    {
+      "type": "text",
+      "text": "#hunger_half",
+      "x": 53,
+      "y": 27
+    },
+    {
+      "type": "text",
+      "text": "#saturation",
+      "x": 91,
+      "y": 27
+    }
+  ]
+}

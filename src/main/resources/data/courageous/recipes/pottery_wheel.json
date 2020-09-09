@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "lll",
+    "crc",
+    "ccc"
+  ],
+  "key": {
+    "l": {
+      "tag": "minecraft:logs"
+    },
+    "c": {
+      "item": "minecraft:cobblestone"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "courageous:pottery_wheel",
+    "count": 1
+  }
+}

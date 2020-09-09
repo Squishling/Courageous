@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:vegetables",
+    "#forge:fruits",
+    "#forge:meats/generic",
+    "#forge:fish"
+  ]
+}

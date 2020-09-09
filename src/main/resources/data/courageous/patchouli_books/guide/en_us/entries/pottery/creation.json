@@ -1,0 +1,37 @@
+{
+  "name": "How to Create Pottery",
+  "icon": "courageous:pottery_wheel",
+  "category": "pottery_category",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Pottery in Courageous offers customizability and is all functional.  Take, for instance, the watering can, allowing you to grow your crops easier, or the food basket, which allows you to store food that would typically take multiple slots all in one place, and allows you to eat this food easily."
+    },
+    {
+      "type": "crafting",
+      "anchor": "pottery_wheel",
+      "recipe": "courageous:pottery_wheel",
+      "text": "The first thing you will need to make to create pottery in Courageous is the pottery wheel, as shown above.  It is activated by a redstone signal, so a button will work or a simple lever will allow automation.  Just put in 4 clay balls (or one clay block),"
+    },
+    {
+      "type": "one_to_one",
+      "item1": "minecraft:clay",
+      "item2": "courageous:unfired_amphora",
+      "text": "select a piece, and make sure its powered.  The pottery wheel will do the rest."
+    },
+    {
+      "type": "crafting",
+      "anchor": "dyeing_pottery",
+      "recipe": "courageous:unfired_cyan_amphora",
+      "title": "Dyeing",
+      "text": "Dyeing of pottery in Courageous is done in the crafting table, before the pottery piece is $(l:pottery/creation#firing_pottery)fired$().  Simply combine any $(l:pottery/creation#pottery_wheel)unfired pottery piece$() with a dye to dye it."
+    },
+    {
+      "type": "smelting",
+      "anchor": "firing_pottery",
+      "recipe": "courageous:yellow_amphora",
+      "title": "Firing",
+      "text": "Firing a pottery piece is also very simple.  Just put an $(l:pottery/creation#pottery_wheel)unfired pottery piece$() in the furnace and cook it, but be warned - fired pottery pieces can't stack, so you will need a hopper to extract them most likely."
+    }
+  ]
+}

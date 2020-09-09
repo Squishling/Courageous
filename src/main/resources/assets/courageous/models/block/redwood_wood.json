@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "courageous:block/redwood_log",
+        "side": "courageous:block/redwood_log"
+    }
+}

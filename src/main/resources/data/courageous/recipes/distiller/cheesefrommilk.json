@@ -1,0 +1,16 @@
+{
+  "type": "courageous:distiller",
+  "input": {
+    "fluid": "minecraft:milk",
+    "amount": 2000
+  },
+  "outputFlow": {
+    "fluid": "minecraft:water",
+    "amount": 1000
+  },
+  "outputResidue": {
+    "fluid": "courageous:cheese",
+    "amount": 1000
+  },
+  "cycles": 20
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Harvesting",
+  "icon": "courageous:plum_leaves",
+  "category": "food_category",
+  "pages": [
+    {
+      "type": "one_to_one_home",
+      "anchor": "fruit_harvest",
+      "item1": "courageous:orange_leaves",
+      "item2": "courageous:orange",
+      "title": "Harvesting",
+      "text": "Harvesting fruit in Courageous is very simple.  Just go to a fruit tree (apple trees can be found in normal $(l:exploration/biomes#forest)forest$()s, other fruit trees in the $(l:exploration/biomes#fruit_forest)Fruit Forest$() biome), and right click on one of the leaves that contains a fruit.  The fruit will pop off, ready for eating!  Eventually, a new fruit will grow back in its place on the leaves."
+    },
+    {
+      "type": "two_to_one",
+      "anchor": "maple_syrup",
+      "item1": "courageous:maple_log_with_slit",
+      "item2": "minecraft:glass_bottle",
+      "item3": "courageous:maple_syrup",
+      "text": "You can get maple syrup from $(l:exploration/trees#maple_tree)maple tree$()s by right clicking on the slit in their trunk with a glass bottle while it has syrup; the syrup will 'grow' back.  Drinking maple syrup can give you food points, saturation and a short boost of speed."
+    }
+  ]
+}

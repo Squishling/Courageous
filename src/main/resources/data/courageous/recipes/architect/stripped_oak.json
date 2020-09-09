@@ -1,0 +1,8 @@
+{
+  "type": "courageous:architect",
+  "ingredient": {
+    "item": "minecraft:oak_log"
+  },
+  "result": "minecraft:stripped_oak_log",
+  "count": 1
+}

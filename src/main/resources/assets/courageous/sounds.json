@@ -1,0 +1,7 @@
+{
+  "pottery_wheel_spin": {
+    "category": "block",
+    "subtitle": "subtitle.courageous.pottery_wheel_spin",
+    "sounds": [ "courageous:pottery_wheel" ]
+  }
+}

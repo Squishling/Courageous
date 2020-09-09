@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "courageous",
+  "version": "${version}",
+  "name": "Courageous",
+  "description": "Courageous is a Minecraft mod that aims to expand survival mode's content in a realistically-styled, whilst still mechanically and difficulty-wise set in the current Minecraft world.  Its content ranges from pottery to sandwiches, traps to animals, oases to building blocks, and more!",
+  "authors": [
+    "Xerousso/Xero"
+  ],
+  "contact": {
+    "homepage": "https://discord.gg/nVe5U3c",
+    "discord": "https://discord.gg/nVe5U3c",
+    "issues": "https://github.com/Xerousso/Courageous/issues",
+    "sources": "https://github.com/Xerousso/Courageous"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/courageous/textures/item/pottery/amphora/fired/amphora.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "io.xerousso.courageous.client.CourageousClient"
+    ],
+    "main": [
+      "io.xerousso.courageous.Courageous"
+    ]
+  },
+  "mixins": [
+    "courageous.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.9.2+build.206",
+    "fabric": "*",
+    "minecraft": "1.16.2"
+  }
+}

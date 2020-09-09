@@ -1,0 +1,13 @@
+{
+  "name": "book.courageous.guide.name",
+  "landing_text": "book.courageous.guide.landing_text",
+  "advancement_namespaces": [ "courageous" ],
+  "version": 0,
+  "subtitle": "book.courageous.guide.subtitle",
+  "book_texture": "courageous:textures/gui/patchouli/guide.png",
+  "filler_texture": "courageous:textures/gui/patchouli/filler.png",
+  "model": "courageous:guide",
+  "creative_tab": "courageous_general",
+  "show_progress": false,
+  "use_blocky_font": false
+}

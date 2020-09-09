@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "courageous:amphora",
+    "courageous:black_amphora",
+    "courageous:blue_amphora",
+    "courageous:brown_amphora",
+    "courageous:cyan_amphora",
+    "courageous:light_blue_amphora",
+    "courageous:light_gray_amphora",
+    "courageous:lime_amphora",
+    "courageous:white_amphora",
+    "courageous:gray_amphora",
+    "courageous:red_amphora",
+    "courageous:orange_amphora",
+    "courageous:yellow_amphora",
+    "courageous:green_amphora",
+    "courageous:pink_amphora",
+    "courageous:magenta_amphora",
+    "courageous:purple_amphora"
+  ]
+}

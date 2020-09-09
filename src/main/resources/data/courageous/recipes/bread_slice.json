@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "courageous:knife"
+    }
+  ],
+  "result": {
+    "item": "courageous:bread_slice",
+    "count": 5
+  }
+}

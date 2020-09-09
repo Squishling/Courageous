@@ -1,0 +1,31 @@
+{
+  "components": [
+    {
+      "type": "header",
+      "text": "#title",
+      "x": 57,
+      "y": 0
+    },
+    {
+      "type": "separator",
+      "x": -1,
+      "y": -1
+    },
+    {
+      "type": "text",
+      "text": "#text",
+      "y": 45
+    }
+  ],
+  "include": [
+    {
+      "template": "one_to_one_widget",
+      "as": "widget",
+      "using": {
+        "item1": "#item1",
+        "item2": "#item2"
+      },
+      "y": 21
+    }
+  ]
+}

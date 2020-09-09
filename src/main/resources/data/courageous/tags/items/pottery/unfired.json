@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "courageous:unfired_amphora",
+    "courageous:unfired_black_amphora",
+    "courageous:unfired_blue_amphora",
+    "courageous:unfired_brown_amphora",
+    "courageous:unfired_cyan_amphora",
+    "courageous:unfired_light_blue_amphora",
+    "courageous:unfired_light_gray_amphora",
+    "courageous:unfired_lime_amphora",
+    "courageous:unfired_white_amphora",
+    "courageous:unfired_gray_amphora",
+    "courageous:unfired_red_amphora",
+    "courageous:unfired_orange_amphora",
+    "courageous:unfired_yellow_amphora",
+    "courageous:unfired_green_amphora",
+    "courageous:unfired_pink_amphora",
+    "courageous:unfired_magenta_amphora",
+    "courageous:unfired_purple_amphora"
+  ]
+}

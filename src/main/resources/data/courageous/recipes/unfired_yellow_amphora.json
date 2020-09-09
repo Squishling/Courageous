@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "amphora",
+  "ingredients": [
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    {
+      "tag": "courageous:pottery/amphora/unfired"
+    }
+  ],
+  "result": {
+    "item": "courageous:unfired_yellow_amphora"
+  }
+}

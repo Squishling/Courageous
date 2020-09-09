@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "courageous:unfired_fluid_pot"
+  },
+  "result": {
+    "item": "courageous:fluid_pot"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "components": [
+    {
+      "type": "image",
+      "image": "courageous:textures/gui/patchouli/guis.png",
+      "width": 59,
+      "height": 22,
+      "texture_width": 128,
+      "texture_height": 128,
+      "x": 27,
+      "y": 0
+    },
+    {
+      "type": "item",
+      "item": "#item1",
+      "x": 30,
+      "y": 3
+    },
+    {
+      "type": "item",
+      "item": "#item2",
+      "x": 67,
+      "y": 3
+    }
+  ]
+}

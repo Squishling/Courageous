@@ -1,0 +1,67 @@
+{
+  "name": "Foods",
+  "icon": "courageous:pear",
+  "category": "food_category",
+  "pages": [
+    {
+      "type": "food",
+      "anchor": "avocado",
+      "food": "courageous:avocado",
+      "title": "Avocado",
+      "hunger": "2",
+      "hunger_half": "1",
+      "saturation": "0.1",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() an $(l:exploration/trees#avocado_tree)avocado tree$()."
+    },
+    {
+      "type": "food",
+      "anchor": "orange",
+      "food": "courageous:orange",
+      "title": "Orange",
+      "hunger": "3",
+      "hunger_half": "1.5",
+      "saturation": "0.3",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() an $(l:exploration/trees#orange_tree)orange tree$()."
+    },
+    {
+      "type": "food",
+      "anchor": "pear",
+      "food": "courageous:pear",
+      "title": "Pear",
+      "hunger": "4",
+      "hunger_half": "2",
+      "saturation": "0.4",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() an $(l:exploration/trees#pear_tree)pear tree$()."
+    },
+    {
+      "type": "food",
+      "anchor": "plum",
+      "food": "courageous:plum",
+      "title": "Plum",
+      "hunger": "3",
+      "hunger_half": "1.5",
+      "saturation": "0.3",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() a $(l:exploration/trees#plum)plum tree$()."
+    },
+    {
+      "type": "food",
+      "anchor": "lemon",
+      "food": "courageous:lemon",
+      "title": "Lemon",
+      "hunger": "1",
+      "hunger_half": "0.5",
+      "saturation": "0.15",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() a $(l:exploration/trees#lemon_tree)lemon tree$()."
+    },
+    {
+      "type": "food",
+      "anchor": "kiwi_fruit",
+      "food": "courageous:kiwi_fruit",
+      "title": "Kiwi Fruit",
+      "hunger": "3",
+      "hunger_half": "1.5",
+      "saturation": "0.35",
+      "text": "Obtained From: $(l:food/harvesting)Harvesting$() a $(l:exploration/trees#kiwi_fruit_tree)kiwi fruit tree$()."
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+    "item.courageous.knife": "Кухонный нож",
+
+    "item.courageous.bread_slice": "Ломтик хлеба",
+
+    "item.courageous.pear": "Груша",
+    "item.courageous.orange": "Апельсин",
+    "item.courageous.plum": "Слива",
+    "item.courageous.lemon": "Лимон",
+    "item.courageous.avocado": "Авокадо",
+    "item.courageous.kiwi_fruit": "Киви",
+
+    "item.courageous.maple_syrup": "Кленовый сироп",
+
+    "item.courageous.mud_ball": "Шар из грязи",
+
+    "item.courageous.unfired_amphora": "Неожженная амфора",
+    "item.courageous.unfired_black_amphora": "Неожженная черная амфора",
+    "item.courageous.unfired_brown_amphora": "Неожженная коричневая амфора",
+    "item.courageous.unfired_blue_amphora": "Неожженная синяя амфора",
+    "item.courageous.unfired_cyan_amphora": "Неожженная бирюзовая амфора",
+    "item.courageous.unfired_gray_amphora": "Неожженная серая амфора",
+    "item.courageous.unfired_green_amphora": "Неожженная зеленая амфора",
+    "item.courageous.unfired_light_blue_amphora": "Неожженная голубая амфора",
+    "item.courageous.unfired_light_gray_amphora": "Неожженная светло-серая амфора",
+    "item.courageous.unfired_lime_amphora": "Неожженная светло-зеленая амфора",
+    "item.courageous.unfired_magenta_amphora": "Неожженная фиолетовая амфора",
+    "item.courageous.unfired_orange_amphora": "Неожженная оранжевая амфора",
+    "item.courageous.unfired_pink_amphora": "Неожженная розовая амфора",
+    "item.courageous.unfired_purple_amphora": "Неожженная пурпурная амфора",
+    "item.courageous.unfired_red_amphora": "Неожженная красная амфора",
+    "item.courageous.unfired_white_amphora": "Неожженная белая амфора",
+    "item.courageous.unfired_yellow_amphora": "Неожженная желтая амфора",
+
+    "item.courageous.amphora": "Амфора",
+    "item.courageous.black_amphora": "Черная амфора",
+    "item.courageous.brown_amphora": "Коричневая амфора",
+    "item.courageous.blue_amphora": "Синяя амфора",
+    "item.courageous.cyan_amphora": "Бирюзовая амфора",
+    "item.courageous.gray_amphora": "Серая амфора",
+    "item.courageous.green_amphora": "Зеленая амфора",
+    "item.courageous.light_blue_amphora": "Голубая амфора",
+    "item.courageous.light_gray_amphora": "Светло-серая амфора",
+    "item.courageous.lime_amphora": "Светло-зеленая амфора",
+    "item.courageous.magenta_amphora": "Фиолетовая амфора",
+    "item.courageous.orange_amphora": "Оранжевая амфора",
+    "item.courageous.pink_amphora": "Розовая амфора",
+    "item.courageous.purple_amphora": "Пурпурная амфора",
+    "item.courageous.red_amphora": "Красная амфора",
+    "item.courageous.white_amphora": "Белая амфора",
+    "item.courageous.yellow_amphora": "Желтая амфора",
+
+    "item.courageous.unfired_watering_can": "Неоженная лейка",
+
+    "item.courageous.watering_can": "Лейка",
+    "item.courageous.black_watering_can": "Черная лейка",
+    "item.courageous.brown_watering_can": "Коричневая лейка",
+    "item.courageous.blue_watering_can": "Синяя лейка",
+    "item.courageous.cyan_watering_can": "Бирюзовая лейка",
+    "item.courageous.gray_watering_can": "Серая лейка",
+    "item.courageous.green_watering_can": "Зеленая лейка",
+    "item.courageous.light_blue_watering_can": "Голубая лейка",
+    "item.courageous.light_gray_watering_can": "Светло-серая лейка",
+    "item.courageous.lime_watering_can": "Светло-зеленая лейка",
+    "item.courageous.magenta_watering_can": "Фиолетовая лейка",
+    "item.courageous.orange_watering_can": "Оранжевая лейка",
+    "item.courageous.pink_watering_can": "Розовая лейка",
+    "item.courageous.purple_watering_can": "Розовая лейка",
+    "item.courageous.red_watering_can": "Красная лейка",
+    "item.courageous.white_watering_can": "Белая лейка",
+    "item.courageous.yellow_watering_can": "Желтая лейка",
+
+    "block.courageous.fallen_leaves": "Опавшие листья",
+
+    "block.courageous.alpine_leaves": "Высокогорные листья",
+    "block.courageous.alpine_sapling": "Высокогорный саженец",
+
+    "block.courageous.palm_leaves": "Пальмовые листья",
+    "block.courageous.palm_log": "Бревно пальмы",
+    "block.courageous.stripped_palm_log": "Обскубанное бревно пальмы",
+    "block.courageous.palm_wood": "Пальмовое дерево",
+    "block.courageous.stripped_palm_wood": "Обскубанное пальмовое дерево",
+    "block.courageous.palm_planks": "Пальмовые доски",
+    "block.courageous.palm_sapling": "Саженец пальмы",
+
+    "block.courageous.redwood_leaves": "Листья красного дерева",
+    "block.courageous.redwood_log": "Бревно красного дерева",
+    "block.courageous.stripped_redwood_log": "Обскубанное бревно красного дерева",
+    "block.courageous.redwood_wood": "Красное дерево",
+    "block.courageous.stripped_redwood_wood": "Обскубанное красное дерево",
+    "block.courageous.redwood_planks": "Доски красного дерева",
+    "block.courageous.redwood_sapling": "Саженец красного дерева",
+
+    "block.courageous.douglas_fir_leaves": "Листья пихты дугласа",
+    "block.courageous.douglas_fir_sapling": "Саженец пихты дугласа",
+
+    "block.courageous.maple_leaves": "Кленовые листья",
+    "block.courageous.maple_log": "Кленовое бревно",
+    "block.courageous.maple_log_syrup": "Кленовый сироп",
+    "block.courageous.stripped_maple_log": "Обскубанное кленовое бревно",
+    "block.courageous.maple_wood": "Клен",
+    "block.courageous.stripped_maple_wood": "Обскубанный клен",
+    "block.courageous.maple_planks": "Кленовые доски",
+    "block.courageous.maple_sapling": "Саженец клена",
+
+    "block.courageous.pear_leaves": "Листья груши",
+    "block.courageous.pear_sapling": "Саженец груши",
+
+    "block.courageous.apple_leaves": "Листва яблони",
+    "block.courageous.apple_sapling": "Саженец яблони",
+
+    "block.courageous.orange_leaves": "Апельсиновые листья",
+    "block.courageous.orange_sapling": "Саженец апельсина",
+
+    "block.courageous.plum_leaves": "Листья сливы",
+    "block.courageous.plum_sapling": "Саженец сливы",
+
+    "block.courageous.kiwi_fruit_leaves": "Листья киви",
+    "block.courageous.kiwi_fruit_sapling": "Саженец киви",
+
+    "block.courageous.avocado_leaves": "Листья авокадо",
+    "block.courageous.avocado_sapling": "Саженец авокадо",
+
+    "block.courageous.lemon_leaves": "Листья лимона",
+    "block.courageous.lemon_sapling": "Саженец лимона",
+
+    "block.courageous.desert_shrub": "Пустынный куст",
+    "block.courageous.steppe_grass": "Степная трава",
+    "block.courageous.bulrushes": "Камыш",
+
+    "block.courageous.mud": "Грязь",
+    "block.courageous.tanned_sand": "Загорелый песок",
+
+    "block.courageous.spiked_wall": "Шипастая стена",
+
+    "block.courageous.pottery_wheel": "Гончарное колесо",
+    "block.courageous.architects_table": "Стол архитектора",
+    "block.courageous.cutting_board": "Нарезочная доска",
+
+    "block.courageous.unfired_fluid_pot": "Необоженный кувшин",
+    "block.courageous.fluid_pot": "Кувшин",
+    "block.courageous.distiller": "Дистиллятор",
+    "block.courageous.bamboo_faucet": "Бамбуковый кран",
+
+    "block.courageous.planterbox": "Сеялка",
+
+    "itemGroup.courageous_pottery": "Гончарство Courageous",
+    "itemGroup.courageous_architect": "Архитектура Courageous",
+    "itemGroup.courageous_world": "Мир Courageous",
+    "itemGroup.courageous_general": "Мелочи Courageous",
+    "itemGroup.courageous_food": "Еда Courageous",
+
+    "book.courageous.guide.name": "Книжка выжившего",
+    "book.courageous.guide.landing_text": "Courageous, это мод, который переделает выживание в Minecraft, в тоже время оставляя его веселым.  Этот мод рассчитан на то, что бы не влиять на механику игры, но в то же время делать её лучше.",
+    "book.courageous.guide.subtitle": "Гайд в Courageous",
+
+    "biome.courageous.autumnal_forest": "Осенний лес",
+    "biome.courageous.snowy_mountain": "Снежная гора",
+    "biome.courageous.fruitful_forest": "Фруктовый лес",
+    "biome.courageous.temperate_rainforest": "Лес темпоральных дождей",
+    "biome.courageous.alpine_forest": "Высокогорный лес",
+    "biome.courageous.chaparral": "Колючий кустарник",
+    "biome.courageous.steppe": "Степь",
+    "biome.courageous.lush_desert": "Пышная пустыня",
+    "biome.courageous.douglas_fir_forest": "Лес Пихт Дугласа",
+    "biome.courageous.redwood_forest": "Краснодревесный лес",
+    "biome.courageous.sparse_alpine_forest": "Редкий альпийский лес",
+    "biome.courageous.tundra": "Тундра",
+    "biome.courageous.wetlands": "Влажные земли",
+    "biome.courageous.oasis": "Оазис",
+
+    "subtitle.courageous.pottery_wheel_spin": "Гончарное колесо вращается"
+}

@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": { "item": "courageous:unfired_gray_watering_can" },
+  "result": { "item": "courageous:gray_watering_can" }
+}

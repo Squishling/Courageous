@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "courageous:maple_log",
+    "courageous:maple_log_syrup",
+    "courageous:stripped_maple_log",
+
+    "courageous:maple_wood",
+    "courageous:stripped_maple_wood"
+  ]
+}

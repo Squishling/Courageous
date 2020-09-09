@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": { "item": "courageous:unfired_blue_amphora" },
+  "result": { "item": "courageous:blue_amphora" }
+}

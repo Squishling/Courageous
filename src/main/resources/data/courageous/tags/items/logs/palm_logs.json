@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "courageous:palm_log",
+    "courageous:stripped_palm_log",
+
+    "courageous:palm_wood",
+    "courageous:stripped_palm_wood"
+  ]
+}

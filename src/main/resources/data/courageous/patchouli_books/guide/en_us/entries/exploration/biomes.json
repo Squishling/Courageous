@@ -1,0 +1,161 @@
+{
+  "name": "Biomes",
+  "icon": "courageous:bulrushes",
+  "category": "exploration_category",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Courageous adds 12 biomes, each with their own special features and properties."
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/wetlands.png"
+      ],
+      "title": "Wetlands",
+      "border": true,
+      "text": "The wetlands biome is said to be a more beautiful swamp.  Following much of the same",
+      "anchor": "wetlands"
+    },
+    {
+      "type": "text",
+      "text": "generation, the wetlands biome improves upon it in a few ways.  First, its more vibrant and much more acceptable to settle down in.  Secondly, it contains mud pits, accentuating the muddy feel of the swamp.  And lastly, it adds beautiful bulrushes to those mud pits."
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/redwood_forest.png"
+      ],
+      "title": "Redwood Forest",
+      "border": true,
+      "text": "The redwood forest biome adds tall $(l:exploration/trees#redwood_tree)redwood tree$()s, and greater $(l:exploration/trees#giant_redwood_tree)giant redwood tree$()s.",
+      "anchor": "redwood_forest"
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/alpine_forest.png"
+      ],
+      "title": "Alpine Forest",
+      "border": true,
+      "text": "The (sparse) alpine forest is a cold environment filled with tall, $(l:exploration/trees#alpine_tree)alpine tree$()s.",
+      "anchor": "alpine_forest"
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/temperate_rainforest.png"
+      ],
+      "title": "Temperate Rainforest",
+      "border": true,
+      "text": "Much like the alpine forest, the temperate rainforest has milder temperatures.",
+      "anchor": "temperate_rainforest"
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/douglas_fir_forest.png"
+      ],
+      "title": "Douglas Fir Forest",
+      "border": true,
+      "text": "The douglas fir forest is densely packed with coniferous $(l:exploration/trees#douglas_fir_tree)douglas fir tree$()s, commonly ",
+      "anchor": "douglas_fir_forest"
+    },
+    {
+      "type": "text",
+      "text": "known as Christmas trees.  This biome can look especially beautiful when paired with a mountain biome."
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/mountain.png"
+      ],
+      "title": "Snowy Mountain",
+      "border": true,
+      "text": "The snowy mountain biome in Courageous is meant to totally replace Extreme hills, offering ",
+      "anchor": "snowy_mountain"
+    },
+    {
+      "type": "text",
+      "text": "much more true-to-life snowy peaks, canyons, bumpy terrain, and more."
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/tundra.png"
+      ],
+      "title": "Tundra",
+      "border": true,
+      "text": "The tundra is a rare form of the snowy tundra, with much more patchy snow.",
+      "anchor": "tundra"
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/forest.png"
+      ],
+      "title": "Forest",
+      "border": true,
+      "text": "Apples are no longer dropped from oak trees, but are instead found on $(l:exploration/trees#apple_tree)apple tree$()s.",
+      "anchor": "forest"
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/fruit_forest.png"
+      ],
+      "title": "Fruit Forest",
+      "border": true,
+      "text": "The fruit forest is full of $(l:exploration/trees#orange_tree)fruit trees$(), offering an abundance of food.  Although ",
+      "anchor": "fruit_forest"
+    },
+    {
+      "type": "text",
+      "text": "somewhat rarer, if you find one of these biomes you can be sure you don't need to worry about food."
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/chaparral.png"
+      ],
+      "title": "Chaparral",
+      "border": true,
+      "text": "The chaparral is a somewhat mountainous brushland, with patches of grass and sand.",
+      "anchor": "chaparral"
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/steppe.png"
+      ],
+      "title": "Steppe",
+      "border": true,
+      "text": "The steppe is full of tall grass, allowing some creatures to be obscured in the foliage...",
+      "anchor": "steppe"
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/lush_desert.png"
+      ],
+      "title": "Lush Desert",
+      "border": true,
+      "text": "The lush desert: a biome of damp, hot climates creates $(l:exploration/trees#palm_tree)palm tree$()s and desert bushes.",
+      "anchor": "lush_desert"
+    },
+    {
+      "type": "image",
+      "images": [
+        "courageous:textures/gui/patchouli/images/autumnal_forest.png"
+      ],
+      "title": "Autumnal Forest",
+      "border": true,
+      "text": "The autumnal forest has shades of green orange, and red amongst its leaves.  Here you ",
+      "anchor": "autumnal_forest"
+    },
+    {
+      "type": "text",
+      "text": "can find a forest trapped in Autumn, with $(l:food/harvesting#maple_syrup)maple syrup$() that can be harvested from $(l:exploration/trees#maple_tree)maple tree$()s in the forest.  There are also fallen leaves to be found."
+    }
+  ]
+}
