@@ -24,7 +24,7 @@ public class BlockEntities {
 
     @Environment(EnvType.CLIENT)
     public static void registerBlockEntitiesClient() {
-//        BlockEntityRendererRegistry.INSTANCE.register(POTTERY_WHEEL_BLOCK_ENTITY, PotteryWheelBER::new);
+        BlockEntityRendererRegistry.INSTANCE.register(POTTERY_WHEEL_BLOCK_ENTITY, PotteryWheelBER::new);
     }
 
     private static <T extends BlockEntity> BlockEntityType<T> registerBlockEntity(Supplier<T> blockEntitySupplier, Block block, String name) {

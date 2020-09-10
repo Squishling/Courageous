@@ -19,8 +19,10 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Convenience Mods
-    modRuntime "io.github.prospector:modmenu:1.14.6+build.31"
-    modRuntime "me.shedaniel:RoughlyEnoughItems:5.3.0"
+    modRuntime("io.github.prospector:modmenu:1.14.6+build.31") {
+        exclude module: 'fabric-api'
+    }
+//    modRuntime "me.shedaniel:RoughlyEnoughItems:5.3.0"
 
     // Libraries
     modImplementation "io.github.cottonmc:LibGui:3.0.0-beta.1+1.16.2-rc2"

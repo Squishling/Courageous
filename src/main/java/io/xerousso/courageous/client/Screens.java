@@ -17,12 +17,12 @@ public class Screens {
     public static ScreenHandlerType<? extends PotteryWheelScreenDescription> POTTERY_WHEEL_SCREEN;
 
     public static void registerScreens() {
-//        POTTERY_WHEEL_SCREEN = registerScreen((syncID, inventory) -> new PotteryWheelScreenDescription(syncID, inventory, ScreenHandlerContext.EMPTY), "pottery_wheel");
+        POTTERY_WHEEL_SCREEN = registerScreen((syncID, inventory) -> new PotteryWheelScreenDescription(syncID, inventory, ScreenHandlerContext.EMPTY), "pottery_wheel");
     }
 
     @Environment(EnvType.CLIENT)
     public static void registerScreensClient() {
-//        ScreenRegistry.<PotteryWheelScreenDescription, PotteryWheelScreen>register(POTTERY_WHEEL_SCREEN, (gui, inventory, title) -> new PotteryWheelScreen(gui, inventory.player, title));
+        ScreenRegistry.<PotteryWheelScreenDescription, PotteryWheelScreen>register(POTTERY_WHEEL_SCREEN, (gui, inventory, title) -> new PotteryWheelScreen(gui, inventory.player, title));
     }
 
     private static <T extends ScreenHandler> ScreenHandlerType<T> registerScreen(SimpleClientHandlerFactory<T> screenHandlerType, String name) {

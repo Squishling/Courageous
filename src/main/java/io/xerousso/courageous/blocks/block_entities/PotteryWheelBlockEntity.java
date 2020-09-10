@@ -18,7 +18,7 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Tickable;
 import org.jetbrains.annotations.Nullable;
 
-public class PotteryWheelBlockEntity extends BlockEntity implements Tickable, BlockEntityClientSerializable, Inventory {
+public class PotteryWheelBlockEntity extends BlockEntity implements Tickable, BlockEntityClientSerializable, Inventory, NamedScreenHandlerFactory {
 
     private ItemStackList INVENTORY = new ItemStackList(3);
 
@@ -33,18 +33,18 @@ public class PotteryWheelBlockEntity extends BlockEntity implements Tickable, Bl
 
     @Override
     public boolean canPlayerUse(PlayerEntity player) {
-        return false;
+        return true;
     }
 
-//    @Override
+    @Override
     public Text getDisplayName() {
         return new TranslatableText("gui.courageous.pottery_wheel");
     }
 
-//    @Override
-//    public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
-////        return new PotteryWheelScreenDescription(syncId, inv, ScreenHandlerContext.create(world, pos));
-//    }
+    @Override
+    public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
+        return new PotteryWheelScreenDescription(syncId, inv, ScreenHandlerContext.create(world, pos));
+    }
 
     // NBT
     // Server

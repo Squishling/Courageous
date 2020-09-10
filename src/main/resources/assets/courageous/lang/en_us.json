@@ -201,5 +201,8 @@
     "biome.courageous.wetlands": "Wetlands",
     "biome.courageous.oasis": "Oasis",
 
-    "subtitle.courageous.pottery_wheel_spin": "Pottery Wheel Spins"
+    "subtitle.courageous.pottery_wheel_spin": "Pottery Wheel Spins",
+
+    "gui.courageous.pottery_wheel": "Pottery",
+    "gui.courageous.pottery_wheel.make": "Make"
 }

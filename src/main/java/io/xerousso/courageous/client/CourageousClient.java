@@ -14,9 +14,8 @@ public class CourageousClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(Blockz.POTTERY_WHEEL, RenderLayer.getCutout());
-
-
+        BlockEntities.registerBlockEntitiesClient();
+        Screens.registerScreensClient();
     }
 
 }

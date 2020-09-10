@@ -8,6 +8,8 @@ public class PotteryWheelScreen extends CottonInventoryScreen<PotteryWheelScreen
 
     public PotteryWheelScreen(PotteryWheelScreenDescription description, PlayerEntity player, Text title) {
         super(description, player, title);
+        width = 230;
+        height = 219;
     }
 
 }
