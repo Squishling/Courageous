@@ -1,15 +1,22 @@
 package io.xerousso.courageous.blocks.block_entities;
 
+import io.xerousso.courageous.client.PotteryWheelScreenDescription;
 import io.xerousso.courageous.util.ItemStackList;
 import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.screen.ScreenHandlerContext;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Tickable;
+import org.jetbrains.annotations.Nullable;
 
 public class PotteryWheelBlockEntity extends BlockEntity implements Tickable, BlockEntityClientSerializable, Inventory {
 
@@ -27,6 +34,45 @@ public class PotteryWheelBlockEntity extends BlockEntity implements Tickable, Bl
     @Override
     public boolean canPlayerUse(PlayerEntity player) {
         return false;
+    }
+
+//    @Override
+    public Text getDisplayName() {
+        return new TranslatableText("gui.courageous.pottery_wheel");
+    }
+
+//    @Override
+//    public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
+////        return new PotteryWheelScreenDescription(syncId, inv, ScreenHandlerContext.create(world, pos));
+//    }
+
+    // NBT
+    // Server
+    @Override
+    public CompoundTag toTag(CompoundTag tag) {
+        super.toTag(tag);
+
+        tag.put("inventory", INVENTORY.serialize());
+
+        return tag;
+    }
+
+    @Override
+    public void fromTag(BlockState state, CompoundTag tag) {
+        super.fromTag(state, tag);
+
+        if (tag.contains("inventory")) INVENTORY.deserialize((CompoundTag) tag.get("inventory"));
+    }
+
+    // Client
+    @Override
+    public CompoundTag toClientTag(CompoundTag compoundTag) {
+        return new CompoundTag();
+    }
+
+    @Override
+    public void fromClientTag(CompoundTag compoundTag) {
+
     }
 
     // Inventory
@@ -67,29 +113,6 @@ public class PotteryWheelBlockEntity extends BlockEntity implements Tickable, Bl
     @Override
     public void clear() {
         INVENTORY.clear();
-    }
-
-    // NBT
-    // Server
-    @Override
-    public CompoundTag toTag(CompoundTag tag) {
-        return super.toTag(tag);
-    }
-
-    @Override
-    public void fromTag(BlockState state, CompoundTag tag) {
-        super.fromTag(state, tag);
-    }
-
-    // Client
-    @Override
-    public CompoundTag toClientTag(CompoundTag compoundTag) {
-        return new CompoundTag();
-    }
-
-    @Override
-    public void fromClientTag(CompoundTag compoundTag) {
-
     }
 
 }

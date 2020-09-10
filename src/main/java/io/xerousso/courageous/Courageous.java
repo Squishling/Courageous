@@ -2,6 +2,7 @@ package io.xerousso.courageous;
 
 import com.google.common.reflect.Reflection;
 import io.xerousso.courageous.blocks.block_entities.BlockEntities;
+import io.xerousso.courageous.client.Screens;
 import net.fabricmc.api.ModInitializer;
 import io.xerousso.courageous.blocks.Blockz;
 
@@ -13,6 +14,7 @@ public class Courageous implements ModInitializer {
     public void onInitialize() {
         Blockz.init();
         BlockEntities.registerBlockEntities();
+        Screens.registerScreens();
     }
 
 }
