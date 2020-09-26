@@ -3,7 +3,7 @@
   "id": "courageous",
   "version": "${version}",
   "name": "Courageous",
-  "description": "Courageous adds brand new and exciting ways to play survival. From pottery to sandwiches, Courageous has it all.",
+  "description": "Courageous adds brand new and exciting ways to play survival. From pottery to sandwiches, Courageous has it all.  Pottery wheel rotating sound sourced from https://freesound.org/people/georgedemure/sounds/209650/ under Creative Commons attribution license.",
   "authors": [
     "Xerousso/Xero"
   ],
@@ -30,6 +30,6 @@
   "depends": {
     "fabricloader": ">=0.9.2+build.206",
     "fabric": "*",
-    "minecraft": "1.16.2"
+    "minecraft": "1.16.3"
   }
 }

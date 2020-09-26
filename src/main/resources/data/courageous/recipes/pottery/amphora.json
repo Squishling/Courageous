@@ -1,0 +1,24 @@
+{
+  "type": "courageous:pottery",
+  "clay": 5,
+  "revolutions": 5,
+  "results": {
+    "": { "item": "courageous:unfired_amphora" },
+    "minecraft:red_dye": { "item": "courageous:unfired_red_amphora" },
+    "minecraft:orange_dye": { "item": "courageous:unfired_orange_amphora" },
+    "minecraft:yellow_dye": { "item": "courageous:unfired_yellow_amphora" },
+    "minecraft:lime_dye": { "item": "courageous:unfired_lime_amphora" },
+    "minecraft:green_dye": { "item": "courageous:unfired_green_amphora" },
+    "minecraft:cyan_dye": { "item": "courageous:unfired_cyan_amphora" },
+    "minecraft:blue_dye": { "item": "courageous:unfired_blue_amphora" },
+    "minecraft:light_blue_dye": { "item": "courageous:unfired_light_blue_amphora" },
+    "minecraft:purple_dye": { "item": "courageous:unfired_purple_amphora" },
+    "minecraft:magenta_dye": { "item": "courageous:unfired_magenta_amphora" },
+    "minecraft:pink_dye": { "item": "courageous:unfired_pink_amphora" },
+    "minecraft:white_dye": { "item": "courageous:unfired_white_amphora" },
+    "minecraft:light_gray_dye": { "item": "courageous:unfired_light_gray_amphora" },
+    "minecraft:gray_dye": { "item": "courageous:unfired_gray_amphora" },
+    "minecraft:black_dye": { "item": "courageous:unfired_black_amphora" },
+    "minecraft:brown_dye": { "item": "courageous:unfired_brown_amphora" }
+  }
+}

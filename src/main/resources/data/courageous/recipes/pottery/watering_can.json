@@ -1,0 +1,24 @@
+{
+  "type": "courageous:pottery",
+  "clay": 5,
+  "revolutions": 5,
+  "results": {
+    "": { "item": "courageous:unfired_watering_can" },
+    "minecraft:red_dye": { "item": "courageous:unfired_red_watering_can" },
+    "minecraft:orange_dye": { "item": "courageous:unfired_orange_watering_can" },
+    "minecraft:yellow_dye": { "item": "courageous:unfired_yellow_watering_can" },
+    "minecraft:lime_dye": { "item": "courageous:unfired_lime_watering_can" },
+    "minecraft:green_dye": { "item": "courageous:unfired_green_watering_can" },
+    "minecraft:cyan_dye": { "item": "courageous:unfired_cyan_watering_can" },
+    "minecraft:blue_dye": { "item": "courageous:unfired_blue_watering_can" },
+    "minecraft:light_blue_dye": { "item": "courageous:unfired_light_blue_watering_can" },
+    "minecraft:purple_dye": { "item": "courageous:unfired_purple_watering_can" },
+    "minecraft:magenta_dye": { "item": "courageous:unfired_magenta_watering_can" },
+    "minecraft:pink_dye": { "item": "courageous:unfired_pink_watering_can" },
+    "minecraft:white_dye": { "item": "courageous:unfired_white_watering_can" },
+    "minecraft:light_gray_dye": { "item": "courageous:unfired_light_gray_watering_can" },
+    "minecraft:gray_dye": { "item": "courageous:unfired_gray_watering_can" },
+    "minecraft:black_dye": { "item": "courageous:unfired_black_watering_can" },
+    "minecraft:brown_dye": { "item": "courageous:unfired_brown_watering_can" }
+  }
+}

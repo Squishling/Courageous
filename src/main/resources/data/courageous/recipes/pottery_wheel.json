@@ -1,19 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "lll",
-    "crc",
-    "ccc"
+    "SSS",
+    " L ",
+    "IPI"
   ],
   "key": {
-    "l": {
+    "S": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "L": {
       "tag": "minecraft:logs"
     },
-    "c": {
-      "item": "minecraft:cobblestone"
+    "I": {
+      "tag": "c:iron_ingots"
     },
-    "r": {
-      "item": "minecraft:redstone"
+    "P": {
+      "item": "minecraft:piston"
     }
   },
   "result": {

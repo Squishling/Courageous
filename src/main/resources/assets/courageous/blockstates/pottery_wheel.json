@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "courageous:block/pottery_wheel" }
+    "pottery_state=base": { "model": "courageous:block/pottery_wheel_base" },
+    "pottery_state=still": { "model": "courageous:block/pottery_wheel" },
+    "pottery_state=turning": { "model": "courageous:block/pottery_wheel" }
   }
 }

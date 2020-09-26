@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "courageous:item/pottery/amphora/unfired/gray_amphora"
+  }
+}

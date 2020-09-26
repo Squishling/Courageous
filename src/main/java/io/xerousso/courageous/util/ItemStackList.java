@@ -7,7 +7,7 @@ import net.minecraft.util.collection.DefaultedList;
 
 import java.util.List;
 
-public class ItemStackList implements IItemStackInventory {
+public class ItemStackList implements ItemStackInventory {
 
     private DefaultedList<ItemStack> list;
 
@@ -95,7 +95,7 @@ public class ItemStackList implements IItemStackInventory {
             int toExtract = Math.min(list.get(i).getCount(), stack.getCount());
             if (toExtract > 0) {
                 if (!simulate) list.get(i).decrement(toExtract);
-                stack.decrement(toExtract);
+                stack.setCount(toExtract);
                 if (!simulate) onContentsChanged(i);
             }
         }
