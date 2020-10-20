@@ -7,15 +7,15 @@ import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
 
 public class Packets {
 
-    private static Packet pottery = new PotteryPacket();
+    public static final PotteryPacket POTTERY = new PotteryPacket();
 
     @Environment(EnvType.CLIENT)
     public static void registerPacketsClient() {
-        registerPacketClient(pottery);
+        registerPacketClient(POTTERY);
     }
 
     public static void registerPacketsCommon() {
-        registerPacketServer(pottery);
+        registerPacketServer(POTTERY);
     }
 
     private static void registerPacketServer(Packet packet) {

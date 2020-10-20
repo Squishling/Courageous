@@ -1,31 +1,20 @@
 package io.xerousso.courageous.blocks.block_entities;
 
-import io.netty.buffer.Unpooled;
-import io.xerousso.courageous.client.screens.PotteryWheelScreen;
 import io.xerousso.courageous.client.screens.PotteryWheelScreenHandler;
 import io.xerousso.courageous.networking.Packets;
-import io.xerousso.courageous.util.ItemStackList;
 import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
-import net.fabricmc.fabric.api.network.ServerSidePacketRegistry;
-import net.fabricmc.fabric.api.server.PlayerStream;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Tickable;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.stream.Stream;
 
 public class PotteryWheelBlockEntity extends BlockEntity implements Tickable, BlockEntityClientSerializable, NamedScreenHandlerFactory {
 
@@ -45,9 +34,8 @@ public class PotteryWheelBlockEntity extends BlockEntity implements Tickable, Bl
     public void setSelectedRecipe(Identifier selectedRecipe) {
         this.selectedRecipe = selectedRecipe;
 
-        if (world != null && !world.isClient) {
-
-        }
+        if (world.isClient) Packets.POTTERY.sendToServer(selectedRecipe, pos);
+        else Packets.POTTERY.sendToClient(selectedRecipe, world, pos);
     }
 
     public Identifier getSelectedRecipe() {
@@ -71,6 +59,7 @@ public class PotteryWheelBlockEntity extends BlockEntity implements Tickable, Bl
         super.toTag(tag);
 
         tag.put("inventory", inventory.serialize());
+        tag.putString("selectedRecipe", selectedRecipe.toString());
 
         return tag;
     }
@@ -80,17 +69,20 @@ public class PotteryWheelBlockEntity extends BlockEntity implements Tickable, Bl
         super.fromTag(state, tag);
 
         if (tag.contains("inventory")) inventory.deserialize((CompoundTag) tag.get("inventory"));
+        if (tag.contains("selectedRecipe")) selectedRecipe = new Identifier(tag.get("selectedRecipe").asString());
     }
 
     // Client
     @Override
-    public CompoundTag toClientTag(CompoundTag compoundTag) {
-        return new CompoundTag();
+    public CompoundTag toClientTag(CompoundTag tag) {
+//        tag.putString("selectedRecipe", selectedRecipe.toString());
+
+        return tag;
     }
 
     @Override
-    public void fromClientTag(CompoundTag compoundTag) {
-
+    public void fromClientTag(CompoundTag tag) {
+        if (tag.contains("selectedRecipe")) selectedRecipe = new Identifier(tag.get("selectedRecipe").asString());
     }
 
 }

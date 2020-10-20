@@ -37,8 +37,6 @@ import java.util.HashMap;
 
 public class PotteryWheel extends BlockWithEntity implements BlockEntityProvider {
 
-    public static ArrayList<Triad<Item, Integer, Integer>> POTTERY_PIECES = new ArrayList<>();
-
     public static final EnumProperty<PotteryStates> POTTERY_STATE = EnumProperty.of("pottery_state", PotteryStates.class);
     private VoxelShape SHAPE = VoxelShapes.union(Block.createCuboidShape(0 , 0 , 0, 16, 2 , 16),  // Base
 

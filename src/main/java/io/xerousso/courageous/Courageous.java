@@ -22,10 +22,6 @@ public class Courageous implements ModInitializer {
         Screens.init();
         Recipes.init();
         Packets.registerPacketsCommon();
-
-        PotteryWheel.POTTERY_PIECES.add(new Triad<>(Blockz.MUD.asItem(), 2, 20));
-        PotteryWheel.POTTERY_PIECES.add(new Triad<>(Blockz.REDWOOD_LOG.asItem(), 5, 25));
-        PotteryWheel.POTTERY_PIECES.add(new Triad<>(Blockz.POTTERY_WHEEL.asItem(), 20, 100));
     }
 
 }
